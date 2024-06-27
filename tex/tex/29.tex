@@ -1,0 +1,214 @@
+\section*{Sección 29}
+
+En los Ejercicios del 1 al 5, muestra que el número dado $a \in \mathbb{C}$ es algebraico sobre $\mathbb{Q}$ encontrando $f(x) \in \mathbb{Q}[x]$ tal que $f(a) = 0$.
+
+\begin{enumerate}
+    \item $1 + \sqrt{2}$
+    \textbf{Solución:} Sea $\alpha = 1 + \sqrt{2}$. Entonces $(\alpha - 1)^2 = 2$, por lo que $\alpha^2 - 2\alpha - 1 = 0$. Por lo tanto, $\alpha$ es una raíz de $x^2 - 2x - 1$ en $Q[x]$.
+    \item $\sqrt{2} + \sqrt{3}$
+    \textbf{Solución:}Sea $\alpha = \sqrt{2} + \sqrt{3}$. Entonces $\alpha^2 = 2 + 2\sqrt{6} + 3$, por lo que $\alpha^2 - 5 = 2\sqrt{6}$. Al elevar al cuadrado nuevamente, obtenemos $\alpha^4 - 10\alpha^2 + 1 = 0$, por lo que $\alpha$ es una raíz de $x^4 - 10x^2 + 1$ en $Q[x]$.
+    \item $1 + i$
+    \textbf{Solución:}Sea $\alpha = 1 + i$. Entonces $(\alpha - 1)^2 = -1$, por lo que $\alpha^2 - 2\alpha + 2 = 0$. Por lo tanto, $\alpha$ es una raíz de $x^2 - 2x + 2$ en $Q[x]$.
+    \item $\sqrt{1 + \sqrt{2}}$
+    \textbf{Solución:}Sea $\alpha = \sqrt{1 + \sqrt{2}}$. Entonces $\alpha^2 = 1 + \sqrt{2}$, por lo que $\alpha^2 - 1 = \sqrt{2}$. Al elevar al cubo, obtenemos $\alpha^6 - 3\alpha^4 + 3\alpha^2 - 3 = 0$, por lo que $\alpha$ es una raíz de $x^6 - 3x^4 + 3x^2 - 3$ en $Q[x]$.
+    \item $y + \frac{1}{\sqrt{1 - i}}$
+    \textbf{Solución:}Sea $\alpha = \sqrt[3]{2} - i$. Entonces $\alpha^2 + i = \sqrt[3]{2}$. Al elevar al cubo, obtenemos $\alpha^6 + 3\alpha^4i - 3\alpha^2 - i = 2$, por lo que $\alpha^6 - 3\alpha^2 - 2 = (1 - 3\alpha^4)i$. Al elevar al cuadrado, obtenemos $\alpha^{12} + 3\alpha^8 - 4\alpha^6 + 3\alpha^4 + 12\alpha^2 + 5 = 0$, por lo que $\alpha$ es una raíz de $x^{12} + 3x^8 - 4x^6 + 3x^4 + 12x^2 + 5$ en $Q[x]$.
+\end{enumerate}
+
+En los Ejercicios del 6 al 8, encuentra $\text{irr}(a, \mathbb{Q})$ y $\text{deg}(a, \mathbb{Q})$ para el número algebraico dado $a \in \mathbb{C}$. Prepárate para demostrar que tus polinomios son irreducibles sobre $\mathbb{Q}$ si se te desafía a hacerlo.
+
+\begin{enumerate}
+    \setcounter{enumi}{5}
+    \item $\sqrt[3]{3} - \sqrt[6]{3}$
+    \textbf{Solución:}
+    Sea $\alpha = \sqrt{3 - \sqrt{6}}$. Entonces $\alpha^2 - 3 = -\sqrt{6}$. Al elevar al cuadrado nuevamente, obtenemos $\alpha^4 - 6\alpha^2 + 3 = 0$, por lo que $\alpha$ es una raíz de $f(x) = x^4 - 6x^2 + 3$ en $Q[x]$. Ahora, $f(x)$ es mónico e irreducible por la condición de Eisenstein con $p = 3$. Por lo tanto, $\text{deg}(\alpha, Q) = 4$ y $\text{irr}(\alpha, Q) = f(x)$.
+    \item $\sqrt{1} + \sqrt{7}$
+    \textbf{Solución:}
+    Sea $\alpha = \frac{1}{\sqrt{3} + \sqrt{7}}$. Entonces $\alpha^2 - \frac{1}{3} = \sqrt{7}$. Al elevar al cuadrado nuevamente, obtenemos $\alpha^4 - \frac{2}{3}\alpha^2 - \frac{62}{9} = 0$, o $9\alpha^4 - 6\alpha^2 - 62 = 0$. Sea $f(x) = 9x^4 - 6x^2 - 62$. Entonces $f(x)$ es irreducible por la condición de Eisenstein con $p = 2$. Por lo tanto, $\text{deg}(\alpha, Q) = 4$ y $\text{irr}(\alpha, Q) = \frac{1}{9}f(x)$.
+    \item $\sqrt{2} + \sqrt{3}$
+    \textbf{Solución:}
+     Sea $\alpha = \sqrt{2} + i$. Entonces $\alpha^2 = 2 + 2\sqrt{2}i - 1$, por lo que $\alpha^2 - 1 = 2\sqrt{2}i$. Al elevar al cuadrado nuevamente, obtenemos $\alpha^4 - 2\alpha^2 + 1 = -8$, por lo que $\alpha^4 - 2\alpha^2 + 9 = 0$. Sea $f(x) = x^4 - 2x^2 + 9$. Se puede demostrar que $f(x)$ es irreducible utilizando la técnica del Ejemplo 23.14. Por lo tanto, $\text{deg}(\alpha, Q) = 4$ y $\text{irr}(\alpha, Q) = f(x)$.
+\end{enumerate}
+
+En los Ejercicios del 9 al 16, clasifica el número dado $a \in \mathbb{C}$ como algebraico o trascendental sobre el campo dado $F$. Si $a$ es algebraico sobre $F$, encuentra $\text{deg}(a, F)$.
+
+\begin{enumerate}
+    \setcounter{enumi}{8}
+    \item $a = i$, $F = \mathbb{Q}$
+    \textbf{Solución:}
+    Vemos que $i$ es algebraico sobre $\mathbb{Q}$ porque es una raíz de $x^2 + 1$ en $Q[x]$; $\text{deg}(i, Q) = 2$.
+    \item $a = 1 + i$, $F = \mathbb{R}$
+    \textbf{Solución:}
+    Sea $\alpha = 1 + i$. Entonces $\alpha - 1 = i$, por lo que $\alpha^2 - 2\alpha + 2 = 0$. Como $\alpha$ no está en $\mathbb{R}$, vemos que $\alpha$ es algebraico de grado 2 sobre $\mathbb{R}$.
+    \item $a = 4\%, F = \mathbb{Q}$
+    \textbf{Solución:}
+    El texto nos dice que $\pi$ es trascendental sobre $\mathbb{Q}$, comportándose como un indeterminado. Por lo tanto, $\sqrt{\pi}$ también es trascendental sobre $\mathbb{Q}$. [Es fácil ver que si una expresión polinómica en $\sqrt{\pi}$ es cero, entonces un polinomio en $\pi$ es cero. Es decir, partiendo de $f(\sqrt{\pi}) = 0$, movemos todos los términos de grado impar hacia el lado derecho, factorizamos $\sqrt{\pi}$ y luego elevamos ambos lados al cuadrado.]
+    \item $a = \sqrt{r}$, $F = K$
+    \textbf{Solución:}
+     Como $\sqrt{\pi} \in \mathbb{R}$, es algebraico sobre $\mathbb{R}$ de grado 1. Es una raíz de $x - \sqrt{\pi}$ en $\mathbb{R}[x]$.
+    \item $a = \sqrt[3]{r} - F = \mathbb{Q}[\omega]$
+    \textbf{Solución:}
+    Ahora, $\sqrt{\pi}$ es algebraico sobre $\mathbb{Q}(\pi)$ de grado 2. No está en $\mathbb{Q}(\pi)$. Recuerda que $\pi$ se comporta como un indeterminado $x$ sobre $\mathbb{Q}$. Observa que $\sqrt{x}$ no está en $\mathbb{Q}(x)$, pero es una raíz de $y^2 - x$ en $\mathbb{Q}(x)[y]$.
+    \item $a = n^2$, $F = \mathbb{Q}$
+    \textbf{Solución:}
+    Ahora, $\pi^2$ es trascendental sobre $\mathbb{Q}$ porque el texto nos dice que $\pi$ es trascendental sobre $\mathbb{Q}$, y una expresión polinómica en $\pi^2$ igualada a cero y con coeficientes racionales se puede ver como una expresión polinómica en $\pi$ igualada a cero con coeficientes en $\mathbb{Q}$ y teniendo todos los términos de grado par.
+    \item $a = n^2$, $F = \mathbb{Q}(n)$
+    \textbf{Solución:}
+     Ahora, $\pi^2 \in \mathbb{Q}(\pi)$, por lo que es algebraico sobre $\mathbb{Q}(\pi)$ de grado 1. Es una raíz de $x - \pi^2$ en $\left(\mathbb{Q}(\pi)\right)[x]$.
+    \item $a = n^2$, $F = \mathbb{Q}(\sqrt{3})$
+    \textbf{Solución:}
+    Ahora, $\pi^2$ es algebraico sobre $\mathbb{Q}(\pi^3)$ de grado 3. No está en $\mathbb{Q}(\pi^3)$ (nota que $x^2$ no es un polinomio en $x^3$), pero es una raíz de $x^3 - (\pi^3)^2 = x^3 - \pi^6$ en $\left(\mathbb{Q}(\pi^3)\right)[x]$.
+    \item Consulta el Ejemplo 29.19 del texto. El polinomio $x^2 + x + 1$ tiene un cero $a$ en $\mathbb{Z}_2(a)$ y, por lo tanto, debe factorizarse en un producto de factores lineales en $(\mathbb{Z}_2(a))[x]$. Encuentra esta factorización.
+    \textbf{Solución:}
+    Realizamos una división.
+    \[
+    \begin{array}{c|cc}
+        & x - \alpha & x^2 + x + 1 \\
+    \hline
+    x^2 - \alpha x & (1 + \alpha)x & \\
+    \hline
+    (1 + \alpha)x & & \\
+    \hline
+    \end{array} 
+    \]
+    Entonces, $x^2 + x + 1 = (x - \alpha)(x + \alpha + 1)$.
+    \item En el Ejercicio 18:
+    \begin{enumerate}
+        \item[a.] Muestra que el polinomio $x^2 + 1$ es irreducible en $\mathbb{Z}_3[x]$.
+        \textbf{Solución:}
+        Sea $f(x) = x^2 + 1$. Entonces $f(0) = 1$, $f(1) = 2$, y $f(-1) = 2$. Por lo tanto, $f(x)$ es un polinomio cúbico sin ceros en $\mathbb{Z}_3$ y, por ende, es irreducible en $\mathbb{Z}_3[x]$.
+        \item[b.] Deja que $a$ sea un cero de $x^2 + 1$ en un campo de extensión de $\mathbb{Z}_3$. Como en el Ejemplo 29.19, proporciona las tablas de multiplicación y adición para los nueve elementos de $\mathbb{Z}_3(a)$, escritos en el orden $0, 1, 2, a, 2a, 1 + a, 1 + 2a, 2 + a$ y $2 + 2a$.
+        \textbf{Solución:}
+        
+    \[
+    \begin{array}{c|cccccccccc}
+        & 0 & 1 & 2 & \alpha & 2\alpha & 1+\alpha & 1+2\alpha & 2+\alpha & 2+2\alpha \\
+    \hline
+    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+    1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+    2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 \\
+    \alpha & \alpha & \alpha & \alpha & \alpha & \alpha & \alpha & \alpha & \alpha & \alpha \\
+    2\alpha & 2\alpha & 2\alpha & 2\alpha & 2\alpha & 2\alpha & 2\alpha & 2\alpha & 2\alpha & 2\alpha \\
+    1+\alpha & 1+\alpha & 1+\alpha & 1+\alpha & 1+\alpha & 1+\alpha & 1+\alpha & 1+\alpha & 1+\alpha & 1+\alpha \\
+    1+2\alpha & 1+2\alpha & 1+2\alpha & 1+2\alpha & 1+2\alpha & 1+2\alpha & 1+2\alpha & 1+2\alpha & 1+2\alpha & 1+2\alpha \\
+    2+\alpha & 2+\alpha & 2+\alpha & 2+\alpha & 2+\alpha & 2+\alpha & 2+\alpha & 2+\alpha & 2+\alpha & 2+\alpha \\
+    2+2\alpha & 2+2\alpha & 2+2\alpha & 2+2\alpha & 2+2\alpha & 2+2\alpha & 2+2\alpha & 2+2\alpha & 2+2\alpha & 2+2\alpha \\
+    \end{array}
+    \]
+
+    \[
+    \begin{array}{c|cccccccccc}
+        & 0 & 1 & 2 & \alpha & 2\alpha & 1+\alpha & 1+2\alpha & 2+\alpha & 2+2\alpha \\
+    \hline
+    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+    1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+    2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 \\
+    \alpha & \alpha & \alpha & \alpha & \alpha & \alpha & \alpha & \alpha & \alpha & \alpha \\
+    2\alpha & 2\alpha & 2\alpha & 2\alpha & 2\alpha & 2\alpha & 2\alpha & 2\alpha & 2\alpha & 2\alpha \\
+    1+\alpha & 1+\alpha & 1+\alpha & 1+\alpha & 1+\alpha & 1+\alpha & 1+\alpha & 1+\alpha & 1+\alpha & 1+\alpha \\
+    1+2\alpha & 1+2\alpha & 1+2\alpha & 1+2\alpha & 1+2\alpha & 1+2\alpha & 1+2\alpha & 1+2\alpha & 1+2\alpha & 1+2\alpha \\
+    2+\alpha & 2+\alpha & 2+\alpha & 2+\alpha & 2+\alpha & 2+\alpha & 2+\alpha & 2+\alpha & 2+\alpha & 2+\alpha \\
+    2+2\alpha & 2+2\alpha & 2+2\alpha & 2+2\alpha & 2+2\alpha & 2+2\alpha & 2+2\alpha & 2+2\alpha & 2+2\alpha & 2+2\alpha \\
+    \end{array}
+    \]
+        
+    \end{enumerate}
+\end{enumerate}
+
+\begin{enumerate}
+\setcounter{enumi}{28}
+\item Sea $E$ una extensión de campo de $F$, y sean $\alpha,\beta \in E$. Supongamos que $\alpha$ es trascendental sobre $F$ pero algebraico sobre $F(\beta)$. Queremos demostrar que $\beta$ es algebraico sobre $F(\alpha)$.
+\textbf{Solución:}
+
+Dado que $\alpha$ es trascendental sobre $F$ pero algebraico sobre $F(\beta)$, nuestro objetivo es mostrar que $\beta$ es algebraico sobre $F(\alpha)$.
+
+Consideremos un elemento en $F(\beta)$, el cual puede expresarse como un cociente de polinomios en $\beta$ con coeficientes en $F$. Esto es:
+
+\begin{equation}
+    \frac{f(\beta)}{g(\beta)} \label{eq:1}
+\end{equation}
+
+donde $f(\beta)$ y $g(\beta)$ son polinomios en $\beta$ con coeficientes en $F$.
+
+Como $\alpha$ es algebraico sobre $F(\beta)$, existe una expresión polinomial en $\alpha$ que es igual a cero. Podemos escribir esto como:
+
+\begin{equation}
+    p(\alpha) = 0 \label{eq:2}
+\end{equation}
+
+donde $p(\alpha)$ es un polinomio en $\alpha$ con coeficientes en $F(\beta)$.
+
+Multiplicando la ecuación \eqref{eq:2} por el polinomio en $\beta$ que es el producto de los denominadores de los coeficientes en la ecuación \eqref{eq:1}, obtenemos un polinomio en $\alpha$ igual a cero y cuyos coeficientes son polinomios en $\beta$. Esto se puede representar como:
+
+\begin{equation}
+    q(\alpha) = 0 \label{eq:3}
+\end{equation}
+
+donde $q(\alpha)$ es un polinomio en $\alpha$ con coeficientes que son polinomios en $\beta$.
+
+Ahora, un polinomio en $\alpha$ con coeficientes que son polinomios en $\beta$ puede ser reescrito formalmente como un polinomio en $\beta$ con coeficientes que son polinomios en $\alpha$. Esto se mantiene igualdad a cero, lo que demuestra que $\beta$ es algebraico sobre $F(\alpha)$.
+
+Por lo tanto, hemos demostrado que $\beta$ es algebraico sobre $F(\alpha)$.
+
+
+
+    \item Sea £ una extensión de campo de un campo finito F, donde F tiene q elementos. Sea $a \in E$ algebraico sobre F de grado n. Demuestra que F($a$) tiene $q^n$ elementos.
+     \textbf{Solución:}
+
+     El Teorema 29.18 muestra que cada elemento de $F(\alpha)$ puede expresarse de manera única en la forma $b_0 + b_1\alpha + b_2\alpha^2 + \dots + b_{n-1}\alpha^{n-1}$. Dado que $F$ tiene $q$ elementos, hay $q$ opciones para $b_0$, luego $q$ opciones para $b_1$, etc. Por lo tanto, hay $q^n$ de tales expresiones en total. La propiedad de unicidad muestra que diferentes expresiones corresponden a elementos distintos de $F(\alpha)$, que por lo tanto deben tener $q^n$ elementos.
+
+    \item 
+    \begin{enumerate}
+        \item[a.] Muestra que existe un polinomio irreducible de grado 3 en $\mathbb{Z}_3[x]$.
+        \item[b.] Demuestra a partir de la parte (a) que existe un campo finito de 27 elementos. [Sugerencia: Usa el Ejercicio 30.]
+    \end{enumerate}
+    \textbf{Solución:}
+
+    \begin{itemize}
+        \item[a.] Sea $f(x) = x^3 + x^2 + 2$. Entonces $f(0) = 2$, $f(1) = 1$, y $f(-1) = 2$, por lo que $f(x)$ no tiene ceros en $\mathbb{Z}_3$ y, por lo tanto, es irreducible sobre $\mathbb{Z}_3[x]$.
+        \item[b.] El Ejercicio 30 muestra que el campo $\mathbb{Z}_3[x]/\langle f(x) \rangle$, que puede ser visto como un campo de extensión de $\mathbb{Z}_3$ de grado 3, tiene $3^3 = 27$ elementos.
+    \end{itemize}
+    
+    \item  Considera el campo primo $\mathbb{Z}_p$ de característica $p \neq 0$.
+    \begin{enumerate}
+        \item[a.] Muestra que, para $p \neq 2$, no todos los elementos en $\mathbb{Z}_p$ son cuadrados de un elemento de $\mathbb{Z}_p$. [Sugerencia: $1^2 = (p-1)^2 = 1$ en $\mathbb{Z}_p$. Deduce la conclusión deseada contando.]
+        \item[b.] Usando la parte (a), muestra que existen campos finitos de $p^2$ elementos para cada primo $p \in \mathbb{Z}^+$.
+    \end{enumerate}
+    
+    \textbf{Solución:}
+    
+    \begin{itemize}
+        \item[a.]Si \( p = 2 \), entonces \( 1^2 = 1 \) y \( (-1)^2 = 1 \) en \( \mathbb{Z}_2 \), pero \( 1^2 = (p - 1)^2 \). Por lo tanto, la función de elevar al cuadrado que mapea \( \mathbb{Z}_p \) a \( \mathbb{Z}_p \) no es biyectiva; de hecho, su imagen puede tener como máximo \( p - 1 \) elementos. Así que algún elemento de \( \mathbb{Z}_p \) no es un cuadrado si \( p \neq 2 \).
+        \item[b.]
+        Vimos en el Ejemplo 29.19 que existe un campo finito de cuatro elementos. Sea \( p \) un primo impar. Por la parte (a), existe un \( a \in \mathbb{Z}_p \) tal que \( x^2 - a \) no tiene ceros en \( \mathbb{Z}_p \). Esto significa que \( x^2 - a \) es irreducible en \( \mathbb{Z}_p[x] \). Sea \( \alpha \) un cero de \( x^2 - a \) en un campo de extensión de \( \mathbb{Z}_p \). Por el Ejercicio 30, \( \mathbb{Z}_p(\alpha) \) tiene \( p^2 \) elementos.
+    \end{itemize}
+    
+    \item  Sea $E$ una extensión de campo de un campo F y sea $a \in E$ transcendental sobre F. Muestra que cada elemento de F($a$) que no está en F también es transcendental sobre F.
+    
+    \textbf{Solución:}
+    
+    Sea \( \beta \in F(\alpha) \). Entonces \( \beta \) es igual a un cociente \( r(\alpha)/s(\alpha) \) de polinomios en \( \alpha \) con coeficientes en \( F \). Supongamos que \( f(\beta) = 0 \), donde \( f(x) \in F[x] \) y tiene grado \( n \). Al multiplicar la ecuación \( f(\beta) = 0 \) por \( s(\alpha)^n \), obtenemos un polinomio en \( \alpha \) con coeficientes en \( F \) que es igual a cero. Pero entonces, \( \alpha \) es algebraico sobre \( F \), lo cual es contrario a la hipótesis. Por lo tanto, no existe tal expresión polinomial no nula \( f(\beta) = 0 \), es decir, \( \beta \) es transcendental sobre \( F \).
+    \item  Muestra que $\{a + b\sqrt{2} + c\sqrt[3]{2} \mid a, b, c \in \mathbb{Q}\}$ es un subcampo de $\mathbb{R}$ utilizando las ideas de esta sección, en lugar de una verificación formal de los axiomas de campo. [Sugerencia: Usa el Teorema 29.18.]
+    \textbf{Solución:}
+    Sabemos que \( x^3 - 2 \) es irreducible en \( \mathbb{Q}[x] \) por la condición de Eisenstein con \( p = 2 \). Por lo tanto, \( \sqrt[3]{2} \) es algebraico de grado 3 sobre \( \mathbb{Q} \). Por el Teorema 29.18, el campo \( \mathbb{Q}(\sqrt[3]{2}) \) consiste en todos los elementos de \( \mathbb{R} \) de la forma \( a + b\sqrt[3]{2} + c(\sqrt[3]{2})^2 \) para \( a, b, c \in \mathbb{Q} \), y valores distintos de \( a, b \) y \( c \) dan elementos distintos de \( \mathbb{R} \). El conjunto dado en el problema consiste precisamente en estos elementos de \( \mathbb{R} \), por lo que el conjunto dado es el campo \( \mathbb{Q}(\sqrt[3]{2}) \).
+    
+    \item  Siguiendo la idea del Ejercicio 31, muestra que existe un campo de 8 elementos; de 16 elementos; de 25 elementos.
+    \textbf{Solución:}
+    Seguimos usando el Teorema 29.18 y el Ejercicio 30. Ahora, el polinomio \( x^3 + x + 1 \) en \( \mathbb{Z}_2[x] \) no tiene ceros en \( \mathbb{Z}_2 \) y, por lo tanto, es irreducible en \( \mathbb{Z}_2[x] \). Si \( \alpha \) es un cero de este polinomio en un campo de extensión, entonces \( \mathbb{Z}_2(\alpha) \) tiene \( 2^3 = 8 \) elementos según el Ejercicio 30.
+    De manera similar, sea \( \alpha \) un cero del polinomio irreducible \( x^4 + x + 1 \) en \( \mathbb{Z}_2[x] \). Entonces \( \mathbb{Z}_2(\alpha) \) tiene \( 2^4 = 16 \) elementos.
+    Finalmente, sea \( \alpha \) un cero del polinomio irreducible \( x^2 - 2 \) en \( \mathbb{Z}_5[x] \). Entonces \( \mathbb{Z}_5(\alpha) \) tiene \( 5^2 = 25 \) elementos.
+    \item  Sea F un campo finito de característica p. Muestra que cada elemento de F es algebraico sobre el campo primo $\mathbb{Z}_p < F$. [Sugerencia: Sea $F^*$ el conjunto de elementos no nulos de F. Aplica teoría de grupos al grupo $(F^*, \cdot)$ para mostrar que cada $a \in F^*$ es un cero de algún polinomio en $\mathbb{Z}_p[x]$ de la forma $x^n - 1$.]
+    \textbf{Solución:}
+    Siguiendo la pista, dejamos que \( F^* \) sea el grupo multiplicativo de elementos no nulos de \( F \). Se nos dice que \( F \) es finito; supongamos que \( F \) tiene \( m \) elementos. Entonces \( F^* \) tiene \( m - 1 \) elementos. Dado que el orden de un elemento de un grupo finito divide al orden del grupo, vemos que para todo \( a \in F^* \) tenemos \( a^{m-1} = 1 \). Por lo tanto, todo \( a \in F^* \) es un cero del polinomio \( x^{m-1} - 1 \). Por supuesto, \( 0 \) es un cero de \( x \). Así que todo \( \alpha \in F \) es algebraico sobre el campo primo \( \mathbb{Z}_p \) de \( F \), ya que el polinomio \( x^{m-1} - 1 \) está en \( \mathbb{Z}_p[x] \) para todos los primos \( p \).
+    \item Usa los Ejercicios 30 y 36 para mostrar que todo campo finito es de orden de potencia de primo, es decir, tiene un número de elementos de potencia de primo.
+    \textbf{Solución:}
+    Sea \( E \) un campo finito con subcampo primo \( \mathbb{Z}_p \). Si \( E = \mathbb{Z}_p \), entonces el orden de \( E \) es \( p \) y hemos terminado. De lo contrario, sea \( \alpha_1 \in E \) donde \( \alpha_1 \notin \mathbb{Z}_p \). Sea \( F_1 = \mathbb{Z}_p(\alpha_1) \). Por el Ejercicio 30, el campo \( F_1 \) tiene orden \( p^{n_1} \) donde \( n_1 \) es el grado de \( \alpha_1 \) sobre \( \mathbb{Z}_p \). Si \( F_1 = E \), hemos terminado. De lo contrario, encontramos \( \alpha_2 \in E \) donde \( \alpha_2 \notin F_1 \), y formamos \( F_2 = F_1(\alpha_2) \), obteniendo un campo de orden \( p^{n_1n_2} \) donde \( n_2 \) es el grado de \( \alpha_2 \) sobre \( F_1 \). Continuamos este proceso, construyendo campos \( F_i \) de orden \( p^{n_1n_2 \dots n_i} \). Dado que \( E \) es un campo finito, este proceso debe terminar eventualmente con un campo \( F_r = E \). Entonces \( E \) tiene orden \( p^{n_1n_2 \dots n_r} \), que es una potencia de \( p \) como se afirma.
+
+\end{enumerate}
+
+
+
+
+
+
+

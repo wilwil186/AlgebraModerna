@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1719430722 "/home/wilson/AlgebraAbstracta/tex/pre.tex" "pre.pdf" "pre" 1719430723 2
+["pdflatex"] 1719501371 "/home/wilson/AlgebraAbstracta/tex/pre.tex" "pre.pdf" "pre" 1719501372 2
   "/etc/texmf/web2c/texmf.cnf" 1719340139 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/wilson/AlgebraAbstracta/tex/pre.tex" 1719426187 3428 76d2cd82687ed0920a85e46612b7651e ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -223,7 +223,7 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1681034085 39561 34c98e380bf7c7201ee6a7909aff625a ""
   "/usr/share/texmf/web2c/texmf.cnf" 1681034085 39561 34c98e380bf7c7201ee6a7909aff625a ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1719340256 7882212 aa1f75a26571401386ea590fa9add160 ""
-  "pre.aux" 1719430722 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "pre.aux" 1719501371 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
   "pre.tex" 1719426187 3428 76d2cd82687ed0920a85e46612b7651e ""
   (generated)
   "pre.aux"

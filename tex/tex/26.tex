@@ -1,0 +1,320 @@
+\section*{26.Homomorphisms and Factor Rings}
+
+\begin{enumerate}
+    \item Describamos todos los homomorfismos de anillos de $\mathbb{Z} \times \mathbb{Z}$ en $\mathbb{Z} \times \mathbb{Z}$.
+
+\textbf{Solución:}
+
+Sea $\varphi$ un homomorfismo de $\mathbb{Z} \times \mathbb{Z}$ en $\mathbb{Z} \times \mathbb{Z}$. Supongamos que $\varphi(1, 0) = (m, n)$. Dado que $\varphi$ es un homomorfismo, tenemos que 
+\begin{align*}
+    (m,n) &= \varphi(1, 0) \\ 
+    &= \varphi[(1, 0)(1, 0)] \\ 
+    &= \varphi(1, 0)\varphi(1, 0) \\
+    &= (m,n)(m,n) \\
+    &= (m^2,n^2)
+\end{align*}
+Vemos que $m^2 = m$ y $n^2 = n$, entonces $\varphi(1, 0)$ debe ser uno de los elementos $(0, 0)$, $(1, 0)$, $(0, 1)$ o $(1, 1)$. (\textbf{Condición 1})
+
+Por un argumento similar, $\varphi(0, 1)$ también debe ser uno de estos mismos cuatro elementos (\textbf{Condición 2}).
+
+
+Además también debemos tener $\varphi(1, 0)\varphi(0, 1) = \varphi(0, 0) = (0, 0)$, pues si como $\varphi$ es un homomorfismo $\varphi(0,0)=(0,0)$ (\textbf{Condición 3}). 
+
+Esto nos da solo 9 posibilidades.
+
+\begin{itemize}
+    \item $\varphi(1, 0) = (1, 0)$ mientras que $\varphi(0, 1) = (0, 0)$ o $(0, 1)$,
+    \item $\varphi(1, 0) = (0, 1)$ mientras que $\varphi(0, 1) = (0, 0)$ o $(1, 0)$,
+    \item $\varphi(1, 0) = (1, 1)$ mientras que $\varphi(0, 1) = (0, 0)$, y
+    \item $\varphi(1, 0) = (0, 0)$ mientras que $\varphi(0, 1)$ puede ser $(0, 0)$, $(1, 0)$, $(0, 1)$ o $(1, 1)$.
+\end{itemize}
+
+Es fácil verificar que cada una de estas opciones da lugar a un homomorfismo.
+
+\item Encuentra todos los enteros positivos $n$ tales que $\mathbb{Z}_{n}$ contiene un subanillo isomorfo a $\mathbb{Z}_2$. 
+
+\textbf{Solución:}
+
+Para que $\mathbb{Z}_n$ contenga un subanillo isomorfo a $\mathbb{Z}_2$, observamos que $\mathbb{Z}_n$ debe contener un elemento no nulo $s$ tal que $s + s = 0$ y $s^2 = s$, para que $s$ pueda desempeñar el papel de $1$ en $\mathbb{Z}_2$. 
+
+De $s + s = 0$, vemos que $n$ debe ser par. Sea $n = 2m$, de modo que el grupo $\langle \{0, m\}, +_{n} \rangle$ sea isomorfo a $\langle \mathbb{Z}_2, +_{2} \rangle$. 
+
+Para que $\langle \{0, m\}, \cdot_{n} \rangle$ sea isomorfo a $\langle \mathbb{Z}_2, \cdot_2 \rangle$, debemos tener $m \cdot m = m$. 
+
+En $\mathbb{Z}_n$, tenemos 
+\begin{itemize}
+    \item $2 \cdot m = m + m = 0$
+    \item $3 \cdot m = (2+1)\cdot m= (2 \cdot m) + m = m$
+    \item $4 \cdot m = 0$
+    \item $5 \cdot m = m$
+    \item etc.
+\end{itemize}
+
+Por lo tanto, tenemos $m \cdot m = m$ en $\mathbb{Z}_n$ si y solo si $m$ es un entero impar. 
+
+Por lo tanto, $\mathbb{Z}_n$ contiene un subanillo isomorfo a $\mathbb{Z}_2$ si y solo si $n = 2m$ $\forall m \in \mathbb{odd}$ ($\mathbb{odd}$ es el conjunto de los enteros impares)
+
+\item Encuentra todos los ideales $N$ de $\mathbb{Z}_{12}$. En cada caso, calcula $\mathbb{Z}_{12} / N$; es decir, encuentra un anillo conocido al cual el anillo cociente sea isomorfo.
+
+\textbf{Solución:}
+
+Debido a que los ideales deben ser subgrupos aditivos, por teoría de grupos vemos que las posibilidades están restringidas a los subgrupos aditivos cíclicos
+\begin{align*}
+    \langle 0 \rangle &= \{0\}, \\
+    \langle 1 \rangle &= \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\}, \\
+    \langle 2 \rangle &= \{0, 2, 4, 6, 8, 10\}, \\
+    \langle 3 \rangle &= \{0, 3, 6, 9\}, \\
+    \langle 4 \rangle &= \{0, 4, 8\}, \text{ y } \\
+    \langle 6 \rangle &= \{0, 6\}.
+\end{align*}
+
+
+Se puede comprobar fácilmente que cada uno de estos es cerrado bajo la multiplicación por cualquier elemento de $\mathbb{Z}_{12}$, por lo que son ideales. Entonces tenemos que $\mathbb{Z}_{12} / \langle 0 \rangle \cong \mathbb{Z}_{12}$, $\mathbb{Z}_{12} / \langle 1 \rangle \cong \{0\}$, $\mathbb{Z}_{12} / \langle 2 \rangle \cong \mathbb{Z}_2$, $\mathbb{Z}_{12} / \langle 3 \rangle \cong \mathbb{Z}_3$, $\mathbb{Z}_{12} / \langle 4 \rangle \cong \mathbb{Z}_4$, y $\mathbb{Z}_{12} / \langle 6 \rangle \cong \mathbb{Z}_6$.
+
+\item Dadas las tablas de adición y multiplicación para $2\mathbb{Z}/8\mathbb{Z}$, Son $2\mathbb{Z}/8\mathbb{Z}$ y $\mathbb{Z}_4$ anillos isomorfos?
+
+\textbf{Solución:}
+\section*{Tablas de adición y multiplicación en $2\mathbb{Z}/8\mathbb{Z}$}
+\begin{multicols}{2}
+\[
+\begin{array}{c|cccc}
++ & 8\mathbb{Z} & 2+8\mathbb{Z} & 4+8\mathbb{Z} & 6+8\mathbb{Z} \\
+\hline
+8\mathbb{Z} & 8\mathbb{Z} & 2+8\mathbb{Z} & 4+8\mathbb{Z} & 6+8\mathbb{Z} \\
+2+8\mathbb{Z} & 2+8\mathbb{Z} & 4+8\mathbb{Z} & 6+8\mathbb{Z} & 8\mathbb{Z} \\
+4+8\mathbb{Z} & 4+8\mathbb{Z} & 6+8\mathbb{Z} & 8\mathbb{Z} & 2+8\mathbb{Z} \\
+6+8\mathbb{Z} & 6+8\mathbb{Z} & 8\mathbb{Z} & 2+8\mathbb{Z} & 4+8\mathbb{Z} \\
+\end{array}
+\]
+
+
+\[
+\begin{array}{c|cccc}
+\cdot & 8\mathbb{Z} & 2+8\mathbb{Z} & 4+8\mathbb{Z} & 6+8\mathbb{Z} \\
+\hline
+8\mathbb{Z} & 8\mathbb{Z} & 8\mathbb{Z} & 8\mathbb{Z} & 8\mathbb{Z} \\
+2+8\mathbb{Z} & 8\mathbb{Z} & 4+8\mathbb{Z} & 8\mathbb{Z} & 4+8\mathbb{Z} \\
+4+8\mathbb{Z} & 8\mathbb{Z} & 8\mathbb{Z} & 8\mathbb{Z} & 8\mathbb{Z} \\
+6+8\mathbb{Z} & 8\mathbb{Z} & 4+8\mathbb{Z} & 8\mathbb{Z} & 4+8\mathbb{Z} \\
+\end{array}
+\]
+\end{multicols}
+
+\section*{Tablas de adición y multiplicación en \(Z_4\)}
+\begin{multicols}{2}
+\[
+\begin{array}{c|cccc}
++ & 0 & 1 & 2 & 3 \\
+\hline
+0 & 0 & 1 & 2 & 3 \\
+1 & 1 & 2 & 3 & 0 \\
+2 & 2 & 3 & 0 & 1 \\
+3 & 3 & 0 & 1 & 2 \\
+\end{array}
+\]
+\[
+\begin{array}{c|cccc}
+\cdot & 0 & 1 & 2 & 3 \\
+\hline
+0 & 0 & 0 & 0 & 0 \\
+1 & 0 & 1 & 2 & 3 \\
+2 & 0 & 2 & 0 & 2 \\
+3 & 0 & 3 & 2 & 1 \\
+\end{array}
+\]
+\end{multicols}
+
+La razón por la cual los anillos \(2\mathbb{Z}/8\mathbb{Z}\) y \(Z_4\) no son isomorfos es que \(2\mathbb{Z}/8\mathbb{Z}\) no tiene elemento unidad mientras que \(Z_4\) sí lo tiene.
+\end{enumerate}
+\begin{enumerate}
+    \setcounter{enumi}{16}
+    \item Dado \( R = \{a + b\sqrt{2} \mid a, b \in \mathbb{Z}\} \) y sea \( R' \) el conjunto de todas las matrices \( 2 \times 2 \) de la forma \( \begin{pmatrix} a & 2b \\ b & a \end{pmatrix} \) donde \( a, b \in \mathbb{Z} \). Demostraremos que \( R \) es un subanillo de \( \mathbb{R} \) y que \( R' \) es un subanillo de \( M_2(\mathbb{Z}) \). Luego mostraremos que \( \varphi : R \to R' \), donde \( \varphi(a + b\sqrt{2}) = \begin{pmatrix} a & 2b \\ b & a \end{pmatrix} \), es un isomorfismo.
+    
+    \textbf{Solución:}
+    
+     Debido a que \( (a + b\sqrt{2}) + (c + d\sqrt{2}) = (a + c) + (b + d)\sqrt{2} \) y \( 0 = 0 + 0\sqrt{2} \), y \( -(a + b\sqrt{2}) = (-a) + (-b)\sqrt{2} \), vemos que \( R \) está cerrado bajo la suma, tiene una identidad aditiva y contiene inversos aditivos. Por lo tanto, \( (R, +) \) es un grupo. 
+ \\
+Ahora, \( (a + b\sqrt{2}) \cdot (c + d\sqrt{2}) = (ac + 2bd) + (ad + bc)\sqrt{2} \), por lo que \( R \) está cerrado bajo la multiplicación y, por lo tanto, es un anillo. Mostraremos que \( R' \) es un anillo demostrando que es la imagen de \( R \) bajo un homomorfismo \( \varphi : R \to M_2(\mathbb{Z}) \). Sea
+\[
+\varphi(a + b\sqrt{2}) =
+\begin{pmatrix}
+a & 2b \\
+b & a
+\end{pmatrix}.
+\]
+Entonces,
+\[
+\varphi((a + b\sqrt{2}) + (c + d\sqrt{2})) = \varphi((a + c) + (b + d)\sqrt{2}) =
+\begin{pmatrix}
+a + c & 2(b + d) \\
+b + d & a + c
+\end{pmatrix}
+\]
+\[
+= \begin{pmatrix} a & 2b \\ b & a \end{pmatrix} + \begin{pmatrix} c & 2d \\ d & c \end{pmatrix} = \varphi(a + b\sqrt{2}) + \varphi(c + d\sqrt{2})
+\]
+y
+\[
+\varphi((a + b\sqrt{2}) \cdot (c + d\sqrt{2})) = \varphi((ac + 2bd) + (ad + bc)\sqrt{2}) =
+\]
+\[
+\begin{pmatrix}
+ac + 2bd & 2(ad + bc) \\
+ad + bc & ac + 2bd
+\end{pmatrix}
+\]
+\[
+= \begin{pmatrix} a & 2b \\ b & a \end{pmatrix} \cdot \begin{pmatrix} c & 2d \\ d & c \end{pmatrix} = \varphi(a + b\sqrt{2}) \cdot \varphi(c + d\sqrt{2}).
+\]
+    Esto muestra que \( \varphi \) es un homomorfismo. Debido a que \( R' = \varphi[R] \), vemos que \( R' \) es un anillo. Si \( \varphi(a + b\sqrt{2}) \) es la matriz con todas las entradas cero, entonces debemos tener \( a = b = 0 \), por lo que \( \text{Ker}(\varphi) = 0 \) y \( \varphi \) es uno a uno. Por lo tanto, \( \varphi \) es un isomorfismo de \( R \) sobre \( R' \).
+\item  Demuestre que cada homomorfismo de un campo a un anillo es uno a uno o asigna todo a 0. \\ 
+\textbf{Solución:}
+
+Sea \( \varphi: F \rightarrow R \) un homomorfismo de un campo \( F \) en un anillo \( R \), y sea \( N = \text{Ker}(\varphi) \). Si \( N \neq \{0\} \), entonces \( N \) contiene un elemento no nulo \( u \) de \( F \) que es una unidad. Dado que \( N \) es un ideal, vemos que \( u^{-1} u = 1 \) está en \( N \), y luego \( N \) contiene un \( 1a= a \) para cada \( a \in F \). Por lo tanto, \( N \) es o \( \{0\} \), en cuyo caso \( \varphi \) es uno a uno por teoría de grupos, o \( N = F \), de modo que \( \varphi \) mapea cada elemento de \( F \) en \( 0 \).
+
+\item Demuestra que si $R$, $R'$ y $R''$ son anillos, y si $\varphi : R \rightarrow R'$ y $\psi : R' \rightarrow R''$ son homomorfismos, entonces la función compuesta $\psi \circ \varphi : R \rightarrow R''$ es un homomorfismo. (Usa el Ejercicio 49 de la Sección 13.)
+
+\textbf{Solución:}
+Por el Ejercicio 49 de la Sección 13, $\psi \circ \varphi(r + s) = \psi(\varphi(r + s)) = \psi(\varphi(r) + \varphi(s))$ para todo $r, s \in R$. Para la multiplicación, observamos que $\psi \circ \varphi(rs) = \psi(\varphi(rs)) = \psi(\varphi(r)\varphi(s)) = \psi(\varphi(r))\psi(\varphi(s))$ porque tanto $\varphi$ como $\psi$ son homomorfismos. Por lo tanto, $\psi \circ \varphi$ también es un homomorfismo.
+
+\item Sea \( R \) un anillo conmutativo con unidad de característica prima \( p \). Demuestra que el mapa \( \varphi_p : R \rightarrow R \) dado por \( \varphi_p(a) = a^p \) es un homomorfismo (el homomorfismo de Frobenius).
+
+\textbf{Solución:}
+En un anillo conmutativo \( R \), la expansión binomial \( (a + b)^n = \sum_{i=0}^{n} \binom{n}{i} a^i b^{n-i} \) es válida. Si \( p \) es un primo y \( n = p \), entonces todos los coeficientes binomiales \( \binom{p}{i} \) para \( 1 \leq i \leq p - 1 \) son divisibles por \( p \), y por lo tanto el término \( \binom{p}{i} a^i b^{p-i} = 0 \) para \( a \) y \( b \) en un anillo conmutativo de característica \( p \). Esto muestra de una vez que \( \varphi_p(a + b) = (a + b)^p = a^p + b^p = \varphi_p(a) + \varphi_p(b) \). Además, \( \varphi_p(ab) = (ab)^p = a^p b^p \) porque \( R \) es conmutativo. Pero \( a^p b^p = \varphi_p(a) \varphi_p(b) \), entonces \( \varphi \) es un homomorfismo
+
+\item Sean \( R \) y \( R' \) anillos y sea \( \varphi : R \rightarrow R' \) un homomorfismo de anillos tal que \( \varphi(1) \neq 0' \). Demuestra que si \( R \) tiene unidad \( 1 \) y \( R' \) no tiene divisores de cero, entonces \( \varphi(1) \) es unidad para \( R' \).
+
+\textbf{Solución:}
+Por el Teorema 26.3, sabemos que \( \varphi(1) \) es la unidad para \( \varphi[R] \). Supongamos que \( R \) tiene la unidad \( 1_R \). Entonces \( \varphi(1_R) = \varphi(1_R \cdot 1_R) = \varphi(1_R) \varphi(1_R) \), por lo que tenemos \( \varphi(1_R) \cdot 1_{R'} - \varphi(1_R) \cdot \varphi(1_R) = 0_{R'} \). En consecuencia, \( \varphi(1_R)(1_{R'} - \varphi(1_R)) = 0_{R'} \). Ahora, si \( \varphi(1_R) = 0_{R'} \), entonces \( \varphi(a) = \varphi(1_R \cdot a) = \varphi(1_R) \cdot \varphi(a) = 0_{R'} \cdot \varphi(a) = 0_{R'} \) para todo \( a \in R \), por lo que \( \varphi[R] = \{0_{R'}\} \), lo que contradice la hipótesis. Por lo tanto, \( \varphi(1_R) \neq 0_{R'} \). Debido a que \( R' \) no tiene divisores de cero, concluimos a partir de \( \varphi(1_R)(1_{R'} - \varphi(1_R)) = 0_{R'} \) que \( 1_{R'} - \varphi(1_R) = 0_{R'} \), por lo que \( \varphi(1_R) \) es la unidad para \( R' \).
+
+\item Sea \( \varphi : R \rightarrow R' \) un homomorfismo de anillos y sea \( N \) un ideal de \( R \).
+    \begin{enumerate}
+        \item Demuestra que \( \varphi[N] \) es un ideal de \( \varphi[R] \).
+        \item Da un ejemplo para mostrar que \( \varphi^{-1}[N] \) no necesariamente es un ideal de \( R \).
+        \item Sea \( N' \) un ideal de \( \varphi[R] \) o de \( R' \). Demuestra que \( \varphi^{-1}[N'] \) es un ideal de \( R \).
+    \end{enumerate}
+
+\textbf{Solución:}
+\begin{enumerate}
+    \item Dado que el ideal \( N \) también es un subanillo de \( R \), el Teorema 26.3 muestra que \( \varphi[N] \) es un subanillo de \( R' \). Para mostrar que es un ideal de \( \varphi[R] \), demostramos que \( \varphi(r)\varphi[N] \subseteq \varphi[N] \) y \( \varphi[N]\varphi(r) \subseteq \varphi[N] \) para todo \( r \in R \). Sea \( r \in R \) y \( s \in N \). Entonces \( rs \in N \) y \( sr \in N \) porque \( N \) es un ideal. Aplicando \( \varphi \), vemos que \( \varphi(r)\varphi(s) = \varphi(rs) \in \varphi[N] \) y \( \varphi(s)\varphi(r) = \varphi(sr) \in \varphi[N] \).
+    \item Sea \( \varphi : \mathbb{Z} \rightarrow \mathbb{Q} \) el mapa de inyección dado por \( \varphi(n) = n \) para todo \( n \in \mathbb{Z} \). Ahora, \( 2\mathbb{Z} \) es un ideal de \( \mathbb{Z} \), pero \( 2\mathbb{Z} \) no es un ideal de \( \mathbb{Q} \) porque \( (\frac{1}{2})z2 = 1 \) y \( 1 \) no está en \( 2\mathbb{Z} \).
+    \item  Sea \( N' \) un ideal de \( R' \) o de \( \varphi[R] \). Sabemos que \( \varphi^{-1}[N'] \) es al menos un subanillo de \( R \) por el Teorema 26.3. Debemos mostrar que \( r\varphi^{-1}[N'] \subseteq \varphi^{-1}[N'] \) y que \( \varphi^{-1}[N']r \subseteq \varphi^{-1}[N'] \) para todo \( r \in R \). Sea \( s \in \varphi^{-1}[N'] \), de modo que \( \varphi(s) \in N' \). Entonces \( \varphi(rs) = \varphi(r)\varphi(s) \) y \( \varphi(r)\varphi(s) \in N' \) porque \( N' \) es un ideal. Esto muestra que \( rs \in \varphi^{-1}[N'] \), por lo que \( r\varphi^{-1}[N'] \subseteq \varphi^{-1}[N'] \). También \( \varphi(sr) = \varphi(s)\varphi(r) \) y \( \varphi(s)\varphi(r) \in N' \) porque \( N' \) es un ideal. Esto muestra que \( sr \in \varphi^{-1}[N'] \), por lo que \( \varphi^{-1}[N']r \subseteq \varphi^{-1}[N'] \).
+\end{enumerate}
+
+\item Sea \( F \) un campo y sea \( S \) cualquier subconjunto de \( F \times F \times \dots \times F \) con \( n \) factores. Demuestra que el conjunto \( N_S \) de todas las \( f(x_1, \dots, x_n) \in F[x_1, \dots, x_n] \) que tienen cada elemento \( (a_1, \dots, a_n) \) de \( S \) como cero es un ideal en \( F[x_1, \dots, x_n] \). Esto es importante en geometría algebraica.
+
+\textbf{Solución:}
+ Si \( f(x_1, \dots, x_n) \) y \( g(x_1, \dots, x_n) \) tienen cada elemento de \( S \) como cero, entonces también lo hacen su suma, producto y cualquier múltiplo de uno de ellos por cualquier elemento \( h(x_1, \dots, x_n) \) en \( F[x_1, \dots, x_n] \). Debido a que los posibles multiplicadores de \( F[x_1, \dots, x_n] \) incluyen \( 0 \) y \( -1 \), vemos que el conjunto \( N_S \) es de hecho un subanillo cerrado bajo la multiplicación por elementos de \( F[x_1, \dots, x_n] \), y por lo tanto es un ideal de este anillo de polinomios.
+
+\item Demuestra que un anillo cociente de un campo es o bien el anillo trivial (cero) de un elemento o es isomorfo al campo.
+
+\textbf{Solución:}
+Sea \( N \) un ideal de un campo \( F \). Si \( N \) contiene un elemento no nulo \( a \), entonces \( N \) contiene \( (1/a)a = 1 \), porque \( N \) es un ideal. Pero entonces \( N \) contiene \( s \cdot 1 = s \) para cada \( s \in F \), por lo que \( N = F \). Por lo tanto, \( N \) es o bien \( \{0\} \) o \( F \). Si \( N = F \), entonces \( F/N = F/F \) es el anillo trivial de un elemento. Si \( N = \{0\} \), entonces \( F/N = F/\{0\} \) es isomorfo a \( F \), porque cada elemento \( s + \{0\} \) de \( F/\{0\} \) puede ser renombrado como \( s \).
+
+\item  Demuestra que si \( R \) es un anillo con unidad y \( N \) es un ideal de \( R \) tal que \( N \neq R \), entonces \( R/N \) es un anillo con unidad.
+
+\textbf{Solución:}
+Si \( N \neq R \), entonces la unidad \( 1 \) de \( R \) no es un elemento de \( N \), porque si \( 1 \in N \), entonces también \( r \cdot 1 = r \) para todo \( r \in R \). Así que \( 1 + N \neq N \), es decir, \( 1 + N \) no es el elemento cero de \( R/N \). Claramente, \( (1 + N)(r + N) = r + N = (r + N)(1 + N) \) en \( R/N \), lo que muestra que \( 1 + N \) es la unidad para \( R/N \).
+
+\item Sea $R$ un anillo conmutativo y sea $a \in R$. Muestra que $Ia = \{x \in R \mid ax = 0\}$ es un ideal de $R$.
+
+\textbf{Solución:}
+ Sean $x, y \in Ia$ entonces $ax = ay = 0$. Entonces $a(x + y) = ax + ay = 0 + 0 = 0$ por lo que $(x + y) \in Ia$. Además, $a(xy) = (ax)y = 0y = 0$ entonces $xy \in Ia$. Como $a \cdot 0 = 0$ y $a(-x) = -(ax) = -0 = 0$, vemos que $Ia$ contiene $0$ y los inversos aditivos de cada uno de sus elementos $x$, por lo que $Ia$ es un subanillo de $R$. (Nota que hasta este punto no hemos usado la conmutatividad en $R$). Sea $r \in R$. Entonces $a(xr) = (ax)r = 0r = 0$ entonces $xr \in Ia$, y como $R$ es conmutativo, vemos que $a(rx) = r(ax) = r0 = 0$, entonces $rx \in Ia$. Así que $Ia$ es un ideal de $R$.
+
+\item Muestra que la intersección de ideales de un anillo $R$ es nuevamente un ideal de $R$.
+
+\textbf{Solución:}
+Sea $\{Ni \mid i \in I\}$ una colección de ideales en $R$. Cada uno de estos ideales es un subanillo de $R$, y el Ejercicio 49 de la Sección 18 muestra que $N = \bigcap_{i \in I} Ni$ también es un subanillo de $R$. Solo necesitamos mostrar que $N$ está cerrado bajo la multiplicación por elementos de $R$. Sea $r \in R$ y sea $s \in N$. Entonces $s \in Ni$ para todo $i \in I$. Como cada $Ni$ es un ideal de $R$, vemos que $rs \in Ni$ y $sr \in Ni$ para todo $i \in I$. Así que $rs \in N$.
+
+\item Sean \(R\) y \(R'\) anillos, y sean \(N\) y \(N'\) ideales de \(R\) y \(R'\), respectivamente. Sea \(\phi\) un homomorfismo de \(N'\) en \(R\). Demuestra que \(\phi\) induce un homomorfismo natural \(\phi^* : R/N \rightarrow R'/N'\) si \(\phi[N] \subseteq N'\).
+    
+\textbf{Solución:}
+    
+    Por el Ejercicio 39 de la Sección 14, el mapa \(\phi^* : R/N \rightarrow R'/N'\) definido por \(\phi^*(r + N) = \phi(r) + N'\) está bien definido y satisface los requisitos aditivos para ser un homomorfismo. Ahora, para mostrar que también satisface la condición multiplicativa, consideremos \(r, s \in R\):
+    \begin{align*}
+        \phi^*((r+N)(s+N)) &= \phi^*(rs + N) \\
+        &= \phi(rs) + N' \\
+        &= [\phi(r)\phi(s)] + N' \\
+        &= [\phi(r) + N'][\phi(s) + N'] \\
+        &= [\phi^*(r + N)][\phi^*(s + N)].
+    \end{align*}
+    Así, \(\phi^*\) cumple tanto con las condiciones aditivas como multiplicativas, y por lo tanto es un homomorfismo de anillos.
+
+
+
+\item  Sea $\theta$ un homomorfismo de un anillo $R$ con unidad en un anillo no nulo $R'$. Sea $u$ una unidad en $R$. Muestra que $\theta(u)$ es una unidad en $R'$.
+
+\textbf{Solución:}
+ La condición de que $\theta$ mapea $R$ en un anillo no nulo $R'$ muestra que ninguna unidad de $R$ está en Ker$(\theta)$, pues si Ker$(\theta)$ contiene una unidad $u$, entonces contiene $(ru^{-1})u = r$ para todo $r \in R$, lo que significaría que Ker$(\theta) = R$ y $R'$ sería el anillo cero. Sea $u$ una unidad en $R$. Como $\theta[R] = R'$, sabemos que $\theta(1)$ es la unidad $1$ en $R'$. De $uu^{-1} = u^{-1}u = 1$, obtenemos $\theta(uu^{-1}) = \theta(u)\theta(u^{-1}) = 1$ y $\theta(u^{-1}u) = \theta(u^{-1})\theta(u) = 1$. Así que $\theta(u)$ es una unidad de $R'$, y su inversa es $\theta(u^{-1})$.
+
+\item Un elemento $a$ de un anillo $R$ es nilpotente si $a^n = 0$ para algún $n \in \mathbb{Z^+}$. Muestra que la colección de todos los elementos nilpotentes en un anillo conmutativo $R$ es un ideal, el nilradical de $R$.
+
+\textbf{Solución:}
+Sea $\{0\}$ la colección de todos los elementos nilpotentes de $R$. Sean $a, b \in \{0\}$. Entonces existen enteros positivos $m$ y $n$ tales que $a^m = b^n = 0$. En un anillo conmutativo, la expansión binomial es válida. Consideremos $(a + b)^{m+n}$. En la expansión binomial, cada término contiene un término $a^i b^{m+n-i}$. Ahora bien, o bien $i \geq m$ por lo que $a^i = 0$ o bien $m + n - i \geq n$ por lo que $b^{m+n-i} = 0$. Así que cada término de $(a + b)^{m+n}$ es cero, entonces $(a + b)^{m+n} = 0$ y $\{0\}$ está cerrado bajo la adición. Para la multiplicación, $(ab)^{mn} = (a^m)^n (b^n)^m = (0)(0) = 0$, así que $ab \in \{0\}$. Si $s \in R$, entonces $(sa)^m = a^m s = 0s = 0$ entonces $\{0\}$ también está cerrado bajo la multiplicación izquierda y derecha por elementos de $R$. Tomando $x = 0$, vemos que $0 \in \{0\}$. También $(-a)^m$ es o bien $a^m$ o $-a^m$, así que $(-a)^m = 0$ y $-a \in \{0\}$. Así que $\{0\}$ es un ideal de $R$.
+
+\item Refiriéndose a la definición dada en el Ejercicio 30, encuentra el nilradical del anillo $\mathbb{Z}_{12}$ y observa que es uno de los ideales de $\mathbb{Z}_{12}$ encontrados en el Ejercicio 3. ¿Cuál es el nilradical de $\mathbb{Z}$? ¿Y de $\mathbb{Z}_{32}$?
+
+\textbf{Solución:}
+ El nilradical de $\mathbb{Z}_{12}$ es $\{0, 6\}$. El nilradical de $\mathbb{Z}$ es $\{0\}$ y el nilradical de $\mathbb{Z}_{32}$ es $\{0, 2, 4, 6, 8, \dots, 30\}$.
+
+\item  Refiriéndose al Ejercicio 30, muestra que si $N$ es el nilradical de un anillo conmutativo $R$, entonces $R/N$ tiene como nilradical el ideal trivial $\{0 + N\}$.
+
+\textbf{Solución:}
+Supongamos que $(a + N)^{m} = N$ en $R/N$. Entonces $a^{m} \in N$. Como $N$ es el nilradical de $R$, existe $n \in \mathbb{Z}^{+}$ tal que $(a^{m})^{n} = 0$. Pero entonces $a^{mn} = 0$, por lo que $a \in N$. Así que $a + N = N$, por lo que $\{N\}$ es el nilradical de $R/N$.
+
+\item Sea $R$ un anillo conmutativo y $N$ un ideal de $R$. Refiriéndose al Ejercicio 30, muestra que si cada elemento de $N$ es nilpotente y el nilradical de $R/N$ es $R/N$, entonces el nilradical de $R$ es $R$.
+
+\textbf{Solución:}
+Sea $a \in R$. Como el nilradical de $R/N$ es $R/N$, existe algún entero positivo $m$ tal que $(a + N)^{m} = N$. Entonces $a^{m} \in N$. Como cada elemento de $N$ es nilpotente, existe un entero positivo $n$ tal que $(a^{m})^{n} = 0$ en $R$. Pero entonces $a^{mn} = 0$, así que $a$ es un elemento del nilradical de $R$. Por lo tanto, el nilradical de $R$ es $R$.
+
+\item Sea $R$ un anillo conmutativo y $N$ un ideal de $R$. Muestra que el conjunto $\sqrt{N}$ de todos los $a \in R$, tales que $a^{n} \in N$ para algún $n \in \mathbb{Z}^{+}$, es un ideal de $R$, el radical de $N$.
+
+\textbf{Solución:}
+ Sea $a, b \in N$. Entonces $a^{m} \in N$ y $b^{n} \in N$ para algunos enteros positivos $m$ y $n$. Precisamente como en la respuesta al Ejercicio 30, argumentamos que $a + b \in N$, $ab \in N$, y también que $sa \in N$ y $as \in N$ para cualquier $s \in R$. Como $0 \in N$, vemos que $0 \in N$ también. Además, $(-a)^{m}$ es $a^{m}$ o $-(a^{m})$, y ambos $a^{m}$ y $-(a^{m})$ están en $N$. Por lo tanto, $-a \in N$. Esto muestra que $N$ es un ideal de $R$.
+
+\item Refiriéndose al Ejercicio 34, muestra con ejemplos que para ideales propios $N$ de un anillo conmutativo $R$:
+\begin{enumerate}
+    \item $\sqrt{N}$ no necesariamente es igual a $N$.
+    \item $\sqrt{N}$ puede ser igual a $N$.
+\end{enumerate}
+
+\textbf{Solución:}
+\begin{enumerate}
+    \item[a.] Sea $R = \mathbb{Z}$ y sea $N = 4\mathbb{Z}$. Entonces $N = 2\mathbb{Z} \neq 4\mathbb{Z}$.
+    \item[b.] Sea $R = \mathbb{Z}$ y sea $N = 2\mathbb{Z}$. Entonces $N = 2\mathbb{Z}$.
+\end{enumerate}
+
+\item ¿Cuál es la relación del ideal $\sqrt{N}$ del Ejercicio 34 con el nilradical de $R/N$ (ver Ejercicio 30)? Expresa cuidadosamente tu respuesta.
+
+\textbf{Solución:}
+Si consideramos que $N/N$ es un subanillo de $R/N$, entonces es el nilradical de $R/N$, en el sentido de la definición en el Ejercicio 30.
+
+\item Demuestra que $\phi : \mathbb{C} \rightarrow M_2(\mathbb{R})$ dada por $\phi(a + bi) = \begin{pmatrix} a & b \\ -b & a \end{pmatrix}$ para $a, b \in \mathbb{R}$ es un isomorfismo de $\mathbb{C}$ con el subanillo $\phi[\mathbb{C}]$ de $M_2(\mathbb{R})$.
+\textbf{Solución:}
+Tenemos que
+    \[
+    \begin{pmatrix} a+c & b+d \\ -b & -d \end{pmatrix} = \phi\left[(a + bi) + (c + di)\right] = \phi\left[(a + c) + (d + b)i\right] =
+    \begin{pmatrix} a & b \\ -b & -d \end{pmatrix} + \begin{pmatrix} c & d \\ -d & -c \end{pmatrix} = \phi(a + bi) + \phi(c + di).
+    \]
+    También,
+    \[
+    \begin{pmatrix} ac - bd & ad + bc \\ -ad & -bc \end{pmatrix} = \phi\left[(a + bi)(c + di)\right] = \phi\left[(ac - bd) + (ad + bc)i\right] =
+    \begin{pmatrix} a & b \\ -b & -d \end{pmatrix} \begin{pmatrix} c & d \\ -d & -c \end{pmatrix} = \phi(a + bi)\phi(c + di).
+    \]
+    Así que $\phi$ es un homomorfismo. Es obvio que $\phi$ es uno a uno. Por lo tanto, $\phi$ exhibe un isomorfismo de $\mathbb{C}$ con el subanillo $\phi[\mathbb{C}]$, que por lo tanto debe ser un campo.
+
+\item Sea $R$ un anillo con unidad y $\text{End}(R, +)$ el anillo de endomorfismos de $(R, +)$ como se describe en la Sección 24. Sea $a \in R$, y sea $\lambda_a : R \rightarrow R$ dada por $\lambda_a(x) = ax$ para $x \in R$.
+        \begin{enumerate}
+            \item Demuestra que $\lambda_a$ es un endomorfismo de $(R, +)$.
+            \item Demuestra que $R' = \{\lambda_a \mid a \in R\}$ es un subanillo de $\text{End}(R, +)$.
+            \item Demuestra el análogo del teorema de Cayley para $R$ mostrando que $R'$ del inciso (b) es isomorfo a $R$.
+        \end{enumerate}
+        
+\textbf{Solución:}
+\begin{enumerate}
+        \item Para $x, y \in R$, tenemos que $\lambda_a(x + y) = a(x + y) = ax + ay = \lambda_a(x) + \lambda_a(y)$. Así que $\lambda_a$ es un homomorfismo de $(R, +)$ consigo mismo, es decir, un elemento de $\text{End}(R, +)$.
+        \item Observa que para $a, b \in R$, tenemos $(\lambda_a \lambda_b)(x) = \lambda_a(\lambda_b(x)) = \lambda_a(bx) = a(bx) = (ab)x = \lambda_{ab}(x)$. Así que $\lambda_a \lambda_b = \lambda_{ab}$ y $R'$ está cerrado bajo multiplicación. También tenemos $(\lambda_a + \lambda_b)(x) = \lambda_a(x) + \lambda_b(x) = ax + bx = (a + b)x = \lambda_{a+b}(x)$, así que $\lambda_a + \lambda_b = \lambda_{a+b}$. Por lo tanto, $R'$ está cerrado bajo la suma. De lo que hemos mostrado, se sigue que $\lambda_0 + \lambda_a = \lambda_{0+a} = \lambda_a$ y $\lambda_a + \lambda_0 = \lambda_{a+0} = \lambda_a$, por lo que $\lambda_0$ actúa como la identidad aditiva. Finalmente, $\lambda_{-a} + \lambda_a = \lambda_{-a+a} = \lambda_0$ y $\lambda_a + \lambda_{-a} = \lambda_{a-a} = \lambda_0$, así que $R'$ contiene una inversa aditiva de cada elemento. Por lo tanto, $R'$ es un anillo.
+        \item Sea $\phi : R \rightarrow R'$ definida por $\phi(a) = \lambda_a$. Por nuestro trabajo en la parte (b), vemos que $\phi(a + b) = \lambda_{a+b} = \lambda_a + \lambda_b = \phi(a) + \phi(b)$, y $\phi(ab) = \lambda_{ab} = \lambda_a \lambda_b = \phi(a) \phi(b)$. Así que $\phi$ es un homomorfismo, y claramente sobre $R'$. Supongamos que $\phi(a) = \phi(b)$. Entonces $ax = bx$ para todo $x \in R$. Como $R$ tiene unidad (y este es el único lugar donde se necesita esa hipótesis), tenemos en particular $a1 = b1$, así que $a = b$. Así que $\phi$ es uno a uno y sobre $R'$, por lo que es un isomorfismo.
+\end{enumerate}
+
+\end{enumerate}

@@ -1,0 +1,395 @@
+
+\section*{27. Prime and Maximal Ideals}
+
+\begin{enumerate}
+\item Encuentra todos los ideales primos y todos los ideales maximales de $\mathbb{Z}_6$.
+
+\textbf{Solución:} Debido a que un dominio integral finito es un campo, los ideales primos y los ideales maximales coinciden. Los ideales $\{0, 2, 4\}$ y $\{0, 3\}$ son tanto primos como maximales porque los anillos cociente son isomorfos a los campos $\mathbb{Z}_2$ y $\mathbb{Z}_3$ respectivamente.
+
+\item Encuentra todos los ideales primos y todos los ideales maximales de $\mathbb{Z}_12$.
+
+\textbf{Solución:} Debido a que un dominio integral finito es un campo, los ideales primos y los ideales maximales coinciden. Los ideales primos y maximales son $\{0, 2, 4, 6, 8, 10\}$ y $\{0, 3, 6, 9\}$ porque los anillos cociente son isomorfos a los campos $\mathbb{Z}_2$ y $\mathbb{Z}_3$ respectivamente.
+
+\item Encuentra todos los ideales primos y todos los ideales maximales de $\mathbb{Z}_2 \times \mathbb{Z}_2$.
+
+\textbf{Solución:} Debido a que un dominio integral finito es un campo, los ideales primos y los ideales maximales coinciden. Los ideales primos y maximales son $\{(0, 0), (1, 0)\}$ y $\{(0, 0), (0, 1)\}$ porque los anillos cociente son isomorfos al campo $\mathbb{Z}_2$.
+
+\item Encuentra todos los ideales primos y todos los ideales maximales de $\mathbb{Z}_2 \times \mathbb{Z}_4$.
+
+\textbf{Solución:} Un dominio integral finito es un campo, así que los ideales primos y los ideales maximales coinciden. Los ideales primos y maximales son $\{(0, 0), (0, 1), (0, 2), (0, 3)\}$ y $\{(0, 0), (1, 0), (0, 2), (1, 2)\}$, lo que lleva a anillos cociente isomorfos al campo $\mathbb{Z}_2$.
+
+\item Encuentra todos los $c \in \mathbb{Z}_3$ tales que $\mathbb{Z}_3[x]/(x^2 + c)$ sea un campo.
+
+\textbf{Solución:} Por el Teorema 27.25, solo necesitamos encontrar todos los valores de $c$ tales que $x^2 + c$ sea irreducible sobre $\mathbb{Z}_3$. Sea $f(x) = x^2$. Entonces $f(0) = 0$, $f(1) = 1$ y $f(2) = 1$. Debemos encontrar $c \in \mathbb{Z}_3$ tal que $0 + c$ y $1 + c$ sean ambos distintos de cero. Claramente, $c = 1$ es la única opción.
+
+\item Encuentra todos los $c \in \mathbb{Z}_3$ tales que $\mathbb{Z}_3[x]/(x^3 + x^2 + c)$ sea un campo.
+
+\textbf{Solución:} Por el Teorema 27.25, solo necesitamos encontrar todos los valores de $c$ tales que $x^3 + x^2 + c$ sea irreducible sobre $\mathbb{Z}_3$. Sea $f(x) = x^3 + x^2$. Entonces $f(0) = 0$, $f(1) = 2$ y $f(2) = 0$. Debemos encontrar $c \in \mathbb{Z}_3$ tal que $0 + c$ y $2 + c$ sean ambos distintos de cero. Claramente, $c = 2$ es la única opción.
+
+\item Encuentra todos los $c \in \mathbb{Z}_3$ tales que $\mathbb{Z}_3[x]/(x^3 + cx^2 + 1)$ sea un campo.
+
+\textbf{Solución:} Por el Teorema 27.25, solo necesitamos encontrar todos los valores de $c$ tales que $g(x) = x^3 + cx^2 + 1$ sea irreducible sobre $\mathbb{Z}_3$. Cuando $c = 0$, $g(2) = 0$ y cuando $c = 1$, $g(1) = 0$, pero cuando $c = 2$, $g(x)$ no tiene ceros. Así que $c = 2$ es la única opción.
+
+\item Encuentra todos los $c \in \mathbb{Z}_5$ tales que $\mathbb{Z}_5[x]/(x^2 + x + c)$ sea un campo.
+
+\textbf{Solución:} Por el Teorema 27.25, solo necesitamos encontrar todos los valores de $c$ tales que $x^2 + x + c$ sea irreducible sobre $\mathbb{Z}_5$. Sea $f(x) = x^2 + x$. Entonces $f(0) = 0$, $f(1) = 2$, $f(2) = 1$, $f(3) = 2$ y $f(4) = 0$. Debemos encontrar $c \in \mathbb{Z}_5$ tal que $0 + c$, $1 + c$ y $2 + c$ sean todos distintos de cero. Claramente, $c = 1$ y $c = 2$ funcionan.
+
+\item Encuentra todos los $c \in \mathbb{Z}_5$ tales que $\mathbb{Z}_5[x]/(x^2 + cx + 1)$ sea un campo.
+
+\textbf{Solución:} Por el Teorema 27.25, solo necesitamos encontrar todos los valores de $c$ tales que $g(x) = x^2 + cx + 1$ sea irreducible sobre $\mathbb{Z}_5$. Calculamos que cuando $c = 0$, $g(2) = 0$, cuando $c = 1$, $g(x)$ no tiene ceros, cuando $c = 2$, $g(-1) = 0$, cuando $c = 3$, $g(1) = 0$, y cuando $c = 4$, $g(x)$ no tiene ceros. Así que $c$ puede ser tanto $1$ como $4$.
+
+\end{enumerate}
+
+\begin{enumerate}
+    \setcounter{enumi}{23}
+    \item Sea $R$ un anillo conmutativo finito con unidad. Demuestra que todo ideal primo en $R$ es un ideal maximal.
+    \textbf{Solución:}
+    El Teorema 19.11 muestra que todo dominio finito integral es un campo. Sea $N$ un ideal primo en un anillo conmutativo finito $R$ con unidad. Entonces $R/N$ es un dominio integral finito, y por lo tanto un campo, y por lo tanto $N$ es un ideal maximal.
+    \item El Corolario 27.18 nos dice que todo anillo con unidad contiene un subanillo isomorfo a $\mathbb{Z}$ o a algún $\mathbb{Z}_n$. ¿Es posible que un anillo con unidad contenga simultáneamente dos subanillos isomorfos a $\mathbb{Z}_n$ y $\mathbb{Z}_m$ para $n \neq m$? Si es posible, da un ejemplo. Si es imposible, pruébalo.
+    \textbf{Solución:}
+    Sí, es posible; $\mathbb{Z}_2 \times \mathbb{Z}_3$ contiene un subanillo isomorfo a $\mathbb{Z}_2$ y uno isomorfo a $\mathbb{Z}_3$.
+    \item Continuando con el Ejercicio 25, ¿es posible que un anillo con unidad contenga simultáneamente dos subanillos isomorfos a los campos $\mathbb{Z}_p$ y $\mathbb{Z}_q$ para dos primos diferentes $p$ y $q$? Da un ejemplo o prueba que es imposible.
+    \textbf{Solución:}
+     Sí, es posible; $\mathbb{Z}_2 \times \mathbb{Z}_3$ contiene un subanillo isomorfo a $\mathbb{Z}_2$ y uno isomorfo a $\mathbb{Z}_3$.
+    \item Siguiendo la idea del Ejercicio 26, ¿es posible que un dominio integral contenga dos subanillos isomorfos a $\mathbb{Z}_p$ y $\mathbb{Z}_q$ para $p \neq q$ y ambos primos? Da razones o una ilustración.
+    \textbf{Solución:}
+    No, no es posible. Ampliando el dominio integral a un campo de cocientes, tendríamos entonces un campo que contiene (hasta la isomorfía) dos campos primos diferentes $\mathbb{Z}_p$ y $\mathbb{Z}_q$. La unidad de cada uno de estos campos sería una raíz de $x^2 - x$, pero este polinomio tiene solo una raíz no nula en un campo, es decir, la unidad del campo.
+    \item Demuestra directamente a partir de las definiciones de ideales maximal y primo que todo ideal maximal de un anillo conmutativo $R$ con unidad es un ideal primo. [Pista: Supón que $M$ es maximal en $R$, $ab \in M$ y $a \notin M$. Argumenta que el ideal más pequeño $\{ra + m \,|\, r \in R, m \in M\}$ que contiene a $a$ y $M$ debe contener a $1$. Expresa $1$ como $ra + m$ y multiplica por $b$.]
+    \textbf{Solución:}
+     Sea $M$ un ideal maximal de $R$ y supongamos que $ab \in M$ pero $a \notin M$. Sea $N = \{ra + m \,|\, r \in R, m \in M\}$. 
+     A partir de $(r_1a + m_1) + (r_2a + m_2) = (r_1 + r_2)a + (m_1 + m_2)$, vemos que $N$ está cerrado bajo la adición. A partir de $r(r_1a + m_1) = (rr_1)a + (rm_1)$ y el hecho de que $M$ sea un ideal, vemos que $N$ está cerrado bajo la multiplicación por elementos de $R$, y por supuesto, está cerrado bajo la multiplicación en sí mismo. También $0 = 0a + 0$ está en $N$ y además $(-r)a + (-m) = -(ra) - m = -(ra + m)$
+     está en $N$. Por lo tanto, $N$ es un ideal. Claramente $N$ contiene a $M$, pero $N \neq M$ porque $1a + 0 = a$ está en $N$ pero $a$ no está en $M$. Como $M$ es maximal, debemos tener $N = R$. Por lo tanto, $1 \in N$, así que $1 = ra + m$ para algún $r \in R$ y $m \in M$. Al multiplicar por $b$, encontramos que $b = rab + mb$. Pero $ab$ y $mb$ están ambos en $M$, así que $b \in M$. 
+     Hemos demostrado que si $ab \in M$ y $a \notin M$, entonces $b \in M$. Esta es la definición de un ideal primo.
+    \item Demuestra que $N$ es un ideal maximal en un anillo $R$ si y solo si $R/N$ es un anillo simple, es decir, no trivial y no tiene ideales propios no triviales. (Compara con el Teorema 15.18.)
+    \textbf{Solución:} Usamos el complemento al Teorema 26.3 declarado en el último párrafo de la Sección 26 y demostrado en el Ejercicio 22 de esa sección. Supongamos que $N$ es cualquier ideal de $R$. Por el complemento mencionado y usando el homomorfismo canónico $\gamma: R \rightarrow R/N$, si $M$ es un ideal propio de $R$ que contiene adecuadamente a $N$, entonces $\gamma[M]$ es un ideal propio no trivial de $R/N$. Esto muestra que si $M$ no es maximal, entonces $R/N$ no es un anillo simple. Por otro lado, supongamos que $R/N$ no es un anillo simple, y sea $N_0$ un ideal propio no trivial de $R/N$. Por el complemento mencionado, $\gamma^{-1}[N_0]$ es un ideal de $R$, y por supuesto $\gamma^{-1}[N_0] \neq R$ porque $N_0$ es un ideal propio de $R/N$, y también $\gamma^{-1}[N_0]$ contiene adecuadamente a $N$ porque $N_0$ es no trivial en $R/N$. Así que $\gamma^{-1}[N_0]$ es un ideal propio de $R$ que contiene adecuadamente a $N$, por lo que $N$ no es maximal. Hemos demostrado que $p$ si y solo si $q$ al demostrar $\neg p$ si y solo si $\neg q$. Este ejercicio es el análogo directo del Teorema 15.18 para grupos, es decir, un ideal maximal de un anillo es análogo a un subgrupo normal maximal de un grupo.
+    \item Demuestra que si $F$ es un campo, entonces todo ideal primo propio no trivial de $F[x]$ es maximal.
+    \textbf{Solución:} Todo ideal de $F[x]$ es principal por el Teorema 26.24. Supongamos que $\langle f(x) \rangle = \{0\}$ es un ideal primo propio de $F[x]$. Entonces, cada polinomio en $\langle f(x) \rangle$ tiene grado mayor o igual al grado de $f(x)$. Así que si $f(x) = g(x)h(x)$ en $F[x]$, donde los grados tanto de $g(x)$ como de $h(x)$ son menores que el grado de $f(x)$, entonces ni $g(x)$ ni $h(x)$ pueden estar en $\langle f(x) \rangle$. Esto contradiría el hecho de que $\langle f(x) \rangle$ es un ideal primo, por lo que no puede existir tal factorización de $f(x)$ en $F[x]$, es decir, $f(x)$ es irreducible en $F[x]$. Por el Teorema 26.25, $\langle f(x) \rangle$ es por lo tanto un ideal maximal de $F[x]$.
+    \item Sea $F$ un campo y $f(x), g(x) \in F[x]$. Demuestra que $f(x)$ divide a $g(x)$ si y solo si $g(x) \in \{f(x)\}$.
+    \textbf{Solución:} Si $f(x)$ divide a $g(x)$, entonces $g(x) = f(x)q(x)$ para algún $q(x) \in F[x]$, por lo que $g(x) \in \langle f(x) \rangle$ porque este ideal consiste en todos los múltiplos de $f(x)$. Recíprocamente, si $g(x) \in \langle f(x) \rangle$, entonces $g(x)$ es algún múltiplo $h(x)f(x)$ de $f(x)$ para $h(x) \in F[x]$. La ecuación $g(x) = h(x)f(x)$ es la definición de $f(x)$ dividiendo a $g(x)$.
+    \item Sea $F$ un campo y sean $f(x), g(x) \in F[x]$. Demuestra que
+    \[
+    N = \{r(x)f(x) + s(x)g(x) \mid r(x), s(x) \in F[x]\}
+    \]
+    es un ideal de $F[x]$. Demuestra que si $f(x)$ y $g(x)$ tienen grados diferentes y $N \neq F[x]$, entonces $f(x)$ y $g(x)$ no pueden ser ambos irreducibles sobre $F$.
+    \textbf{Solución:}
+    La ecuación
+    \[
+    [r_1(x)f(x) + s_1(x)g(x)] + [r_2(x)f(x) + s_2(x)g(x)] = [r_1(x) + r_2(x)]f(x) + [s_1(x) + s_2(x)]g(x)
+    \]
+    muestra que $N$ está cerrado bajo la suma. La ecuación
+    \[
+    [r(x)f(x) + s(x)g(x)]h(x) = h(x)[r(x)f(x) + s(x)g(x)] = [h(x)r(x)]f(x) + [h(x)s(x)]g(x)
+    \]
+    muestra que $N$ está cerrado bajo la multiplicación por cualquier $h(x) \in F[x]$; en particular, $N$ está cerrado bajo la multiplicación. Ahora $0 = 0f(x) + 0g(x)$ y $-[r(x)f(x) + s(x)g(x)] = [-r(x)]f(x) + [-s(x)]g(x)$ están en $N$, por lo que vemos que $N$ es un ideal.
+    Supongamos ahora que $f(x)$ y $g(x)$ tienen grados diferentes y que $N \neq F[x]$. Supongamos que $f(x)$ es irreducible. Por el Teorema 26.25, sabemos que entonces $\langle f(x) \rangle$ es un ideal maximal de $F[x]$. Pero claramente $\langle f(x) \rangle \subseteq N$. Como $N \neq F[x]$, debemos tener $\langle f(x) \rangle = N$. En particular, $g(x) \in N$ entonces $g(x) = f(x)q(x)$. Dado que $f(x)$ y $g(x)$ tienen grados diferentes, vemos que $g(x) = f(x)q(x)$ debe ser una factorización de $g(x)$ en polinomios de grado menor que el grado de $g(x)$. Por lo tanto, $g(x)$ no es irreducible.
+    \item Utiliza el Teorema 27.24 para demostrar la equivalencia de estos dos teoremas:
+    \begin{itemize}
+        \item Teorema Fundamental del Álgebra: Todo polinomio no constante en $C[x]$ tiene un cero en $C$.
+        \item Nullstellensatz para $C[x]$: Sea $f_1(x), \dots, f_r(x) \in C[x]$ y supongamos que todo $a \in C$ que es un cero de todos estos polinomios también es un cero de un polinomio $g(x)$ en $C[x]$. Entonces, algún múltiplo de $g(x)$ está en el ideal más pequeño de $C[x]$ que contiene a los $r$ polinomios $f_1(x), \dots, f_r(x)$.
+    \end{itemize}
+    \textbf{Solución:} Dado que el Teorema Fundamental del Álgebra se cumple, sea $N$ el ideal más pequeño de $C[x]$ que contiene $r$ polinomios $f_1(x), f_2(x), \dots, f_r(x)$. Debido a que todo ideal en $C[x]$ es un ideal principal, tenemos $N = \langle h(x) \rangle$ para algún polinomio $h(x) \in C[x]$. Sea $\alpha_1, \alpha_2, \dots, \alpha_s$ todos los ceros en $C$ de $h(x)$, y sea $\alpha_i$ un cero de multiplicidad $m_i$. Por el Teorema Fundamental del Álgebra, $h(x)$ debe factorizarse en factores lineales en $C[x]$, de modo que
+    \[
+    h(x) = c(x - \alpha_1)^{m_1}(x - \alpha_2)^{m_2} \dots (x - \alpha_s)^{m_s}.
+    \]
+    Observamos que cada $\alpha_i$ es un cero de cada $f_j(x)$ porque cada $f_j(x)$ es un múltiplo del generador $h(x)$ de $N$. Así, por hipótesis, cada $\alpha_i$ es un cero de $g(x)$. El Teorema Fundamental del Álgebra muestra que
+    \[g(x) = k(x)(x - \alpha_1)(x - \alpha_2) \dots (x - \alpha_s)\]
+    para algún polinomio $k(x) \in C[x]$. Sea $m$ el máximo de $m_1, m_2, \dots, m_s$. Entonces $g(x)^m$ tiene cada $(x - \alpha_i)^{m_i}$ como factor, y así tiene a $h(x)$ como factor, por lo que $g(x)^m \in \langle h(x) \rangle = N$.
+
+    Por otro lado, si suponemos que el Nullstellensatz para $C[x]$ se cumple, supongamos que el Teorema Fundamental del Álgebra no se cumple, de modo que existe un polinomio no constante $f_1(x)$ en $C[x]$ que no tiene ceros en $C$. Entonces, cada cero de $f_1(x)$ es también un cero de cada polinomio en $C[x]$, porque no hay ceros de $f_1(x)$. Por el Nullstellensatz para $C[x]$, cada elemento de $C[x]$ tiene la propiedad de que algún múltiplo de él está en $\langle f_1(x) \rangle$, de modo que algún múltiplo de cada polinomio en $C[x]$ tiene a $f_1(x)$ como factor. Esto es ciertamente imposible, porque $1 \in C[x]$ y $f_1(x)$ es un polinomio no constante y, por lo tanto, no es un factor de $1^n = 1$ para ningún entero positivo $n$. Por lo tanto, no puede existir tal polinomio $f_1(x)$ en $C[x]$, y el Teorema Fundamental del Álgebra se cumple.
+    \item Si $A$ y $B$ son ideales de un anillo $R$, la suma $A + B$ de $A$ y $B$ se define como
+    \[
+    A + B = \{a + b \mid a \in A, b \in B\}.
+    \]
+    \begin{enumerate}
+        \item Demuestra que $A + B$ es un ideal.
+        \item Demuestra que $A \subseteq A + B$ y $B \subseteq A + B$.
+    \end{enumerate}
+     \textbf{Solución:}
+     \begin{enumerate}
+    \item[a.] Sea $a_1 , a_2 \in A$ y $b_1 , b_2 \in B$. Entonces, $(a_1 + b_1) + (a_2 + b_2) = (a_1 + a_2) + (b_1 + b_2)$ debido a que la adición es conmutativa. Esto muestra que $A + B$ está cerrado bajo la adición. Para $r \in R$, sabemos que $ra_1 \in A$ y $rb_1 \in B$, por lo que $r(a_1 + b_1) = ra_1 + rb_1$ está en $A + B$. Un argumento similar con la multiplicación a la derecha muestra que $(a_1 + b_1)r = a_1 r + b_1 r$ está en $A + B$. Así que $A + B$ está cerrado bajo la multiplicación a la izquierda o a la derecha por elementos de $R$, en particular, la multiplicación está cerrada en $A + B$. Dado que $0 = 0 + 0 \in A + B$ y $-(a_1 + b_1) = (-a_1) + (-b_1)$ está en $A + B$, vemos que $A + B$ es un ideal.
+    \item[b.] Porque $a + 0 = a$ está en $A + B$ y $0 + b = b$ está en $A + B$ para todo $a \in A$ y $b \in B$, vemos que $A \subseteq (A + B)$ y $B \subseteq (A + B)$.
+    \end{enumerate}
+    
+    \item Sean $A$ y $B$ ideales de un anillo $R$. El producto $AB$ de $A$ y $B$ se define como
+    \[
+    AB = \left\{\sum_{i=1}^{n} a_ib_i \mid a_i \in A, b_i \in B, n \in \mathbb{Z}^+\right\}.
+    \]
+    \begin{enumerate}
+        \item Demuestra que $AB$ es un ideal en $R$.
+        \item Demuestra que $AB \subseteq (A \cap B)$.
+    \end{enumerate}
+    \textbf{Solución:}
+    \begin{enumerate}
+    \item[a.] Es claro que $AB$ está cerrado bajo la adición; [una suma de $m$ productos de la forma $a_i b_i$] $+$ [una suma de $n$ productos de la forma $a_j b_k$] es una suma de $m + n$ productos de esta forma, y por lo tanto está en $AB$. Debido a que $A$ y $B$ son ideales, vemos que $r(a_i b_i) = (ra_i) b_i$ y $(a_i b_i)r = a_i (b_i r)$ están nuevamente en la forma $a_j b_j$. Las leyes distributivas luego muestran que cada suma de productos $a_i b_i$ cuando se multiplica a la izquierda o a la derecha por $r \in R$ produce nuevamente una suma de tales productos. Así que $AB$ está cerrado bajo la multiplicación por elementos de $R$, y por lo tanto está cerrado bajo la multiplicación. Dado que $0 = 0 \cdot 0$ y $-(a_i b_i) = (-a_i)(b_i)$ están en $AB$, vemos que $AB$ es de hecho un ideal.
+    \item[b.] Considerando $a_i b_i$ como $a_i$ en $A$ multiplicado a la derecha por un elemento $b_i$ de $R$, vemos que $a_i b_i$ está en el ideal $A$. Considerando $a_i b_i$ como $b_i$ en $B$ multiplicado a la izquierda por un elemento $a_i$ de $R$, vemos que $a_i b_i$ está en $B$, por lo que $a_i b_i \in A \cap B$. Dado que $A$ y $B$ están cerrados bajo la adición, vemos que cualquier elemento de $AB$ está contenido tanto en $A$ como en $B$, por lo que $AB \subseteq A \cap B$.
+    \end{enumerate}
+    \item  Sea $A$ y $S$ ideales de un anillo conmutativo $R$. El cociente $A : S$ de $A$ por $S$ se define como
+    \[
+    A : S = \{r \in R \mid rb \in A \text{ para todo } b \in S\}.
+    \]
+    Demuestra que $A : S$ es un ideal de $R$.
+
+    \textbf{Solución:}
+
+    Sea $x, y \in A : S$, y sea $b \in S$. Entonces $xb \in A$ y $yb \in A$ para todo $b \in S$, por lo que $(x + y)b = xb + yb$ está en $A$ para todo $b \in S$, ya que $A$ está cerrado bajo la adición. Por lo tanto, $A : S$ está cerrado bajo la adición.
+
+    Pasando a la multiplicación, sea $r \in R$. Queremos mostrar que $xr$ y $rx$ están en $A : S$, es decir, que $(xr)b$ y $(rx)b$ están en $A$ para todo $b \in S$. Dado que la multiplicación es conmutativa por hipótesis, basta con mostrar que $xbr$ está en $A$ para todo $b \in S$. Pero como $x \in A : S$, sabemos que $xb \in A$ y $A$ es un ideal, por lo que $(xb)r \in A$. Por lo tanto, $A : S$ está cerrado bajo la multiplicación por elementos en $R$; en particular, está cerrado bajo la multiplicación.
+
+    Dado que $0b = 0$ y $0 \in A$, vemos que $0 \in A : S$. Como $(-x)b = -(xb)$ y $xb \in A$ implica $(-xb) \in A$, vemos que $A : S$ contiene la identidad aditiva y el inverso aditivo de cada uno de sus elementos.
+    \item Demuestra que para un campo $F$, el conjunto $S$ de todas las matrices de la forma
+    \[
+    \begin{pmatrix}
+    a & 0 \\
+    b & 0
+    \end{pmatrix}
+    \]
+    para $a, b \in F$ es un ideal derecho pero no un ideal izquierdo de $M_2(F)$. Es decir, demuestra que $S$ es un subanillo cerrado bajo la multiplicación por la derecha por cualquier elemento de $M_2(F)$, pero no está cerrado bajo la multiplicación por la izquierda.
+
+    \textbf{Solución:}
+
+    Claramente, $S$ está cerrado bajo la adición, contiene la matriz cero y contiene el inverso aditivo de cada uno de sus elementos. La multiplicación
+    \[
+    \begin{pmatrix}
+    a & 0 \\
+    b & 0
+    \end{pmatrix}
+    \begin{pmatrix}
+    c & d \\
+    e & f
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    ac & ad \\
+    bc & bd
+    \end{pmatrix}
+    \]
+    muestra que $S$ está cerrado bajo la multiplicación, por lo que es un subanillo de $M_2(F)$. Las multiplicaciones
+    \[
+    \begin{pmatrix}
+    0 & 0 \\
+    a & b
+    \end{pmatrix}
+    \begin{pmatrix}
+    0 & 1 \\
+    0 & 0
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    0 & 0 \\
+    a & b
+    \end{pmatrix}
+    \]
+    y
+    \[
+    \begin{pmatrix}
+    a & b \\
+    0 & 0
+    \end{pmatrix}
+    \begin{pmatrix}
+    c & d \\
+    e & f
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    ac+be & ad+bf \\
+    0 & 0
+    \end{pmatrix}
+    \]
+    muestran que $S$ no está cerrado bajo la multiplicación por la izquierda por elementos de $M_2(F)$, pero está cerrado bajo la multiplicación por la derecha por esos elementos. Por lo tanto, $S$ es un ideal derecho pero no un ideal izquierdo de $M_2(F)$.
+    \item Demuestra que el anillo de matrices $M_2(\mathbb{Z}_2)$ es un anillo simple; es decir, $M_2(\mathbb{Z}_2)$ no tiene ideales propios no triviales.
+    \textbf{Solución:}
+
+Consideremos $R = M_2(\mathbb{Z}_2)$. Las siguientes computaciones
+\[
+\begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix}
+\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+=
+\begin{pmatrix}
+c & d \\
+a & b
+\end{pmatrix}
+\]
+y
+\[
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+=
+\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+\]
+muestran que para cada matriz en un ideal $N$ de $R$, la matriz obtenida al intercambiar sus filas y la matriz obtenida al intercambiar sus columnas están nuevamente en $N$. Así que si $N$ contiene cualquiera de las cuatro matrices que tienen un 1 para una entrada y 0 para todas las demás, entonces $N$ contiene las cuatro matrices, y por lo tanto todas las matrices no nulas porque cualquier matriz en $R$ es una suma de tales matrices y $N$ está cerrado bajo la adición. Al intercambiar filas y columnas, cada matriz no nula con al menos dos entradas no nulas puede llevarse a una de las siguientes formas:
+
+\textbf{Dos entradas cero:}
+\[
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+\]
+
+\textbf{Una entrada cero:}
+\[
+\begin{pmatrix}
+1 & 1 \\
+0 & 0
+\end{pmatrix}
+, \quad
+\begin{pmatrix}
+1 & 0 \\
+1 & 0
+\end{pmatrix}
+\]
+
+\textbf{Sin entradas cero:}
+\[
+\begin{pmatrix}
+1 & 1 \\
+1 & 1
+\end{pmatrix}
+\]
+
+Las siguientes computaciones muestran entonces que cada ideal no trivial de $R$ debe contener una de las cuatro matrices con solo una entrada no nula, y por lo tanto debe ser todo $R$:
+\[
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+, \quad
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+\]
+\[
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+\begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix}
+, \quad
+\begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix}
+\begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix}
+\]
+\[
+\begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix}
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 & 0 \\
+1 & 0
+\end{pmatrix}
+, \quad
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+\begin{pmatrix}
+0 & 0 \\
+1 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 & 0 \\
+1 & 0
+\end{pmatrix}
+\]
+\[
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+, \quad
+\begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix}
+\begin{pmatrix}
+0 & 0 \\
+1 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 & 0 \\
+0 & 1
+\end{pmatrix}
+\]
+
+Por lo tanto, el anillo de matrices $M_2(\mathbb{Z}_2)$ es un anillo simple.
+    
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
