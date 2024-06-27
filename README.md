@@ -1,4 +1,4 @@
-# Solucionario de Anillos (Fraile, 7ma Edición) en LaTeX
+# Solucionario de Anillos (Algebra Jhon B. Fraleigh, 7ma Edición) en LaTeX
 
 Este repositorio contiene un solucionario en LaTeX para la parte de anillos del libro "A First Course in Abstract Algebra John B. Fraleigh Seventh Edition". El objetivo es ayudar a estudiantes a comprender mejor los conceptos y técnicas de la teoría de anillos.
 
