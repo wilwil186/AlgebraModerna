@@ -27,7 +27,7 @@ Como \( D \) es un **dominio de ideales principales**, los ideales generados por
 \langle a \rangle \subset \langle a_1 \rangle
 \]
 
-Esto implica que \( \langle a \rangle \neq \langle a_1 \rangle \), pues de lo contrario, \( a_1 \) sería asociado a \( a \) y uno de ellos sería una unidad, lo cual es una contradicción.
+> "Esto implica que \( \langle a \rangle \neq \langle a_1 \rangle \), pues si fueran iguales, existiría una unidad \( u \) tal que \( a = u a_1 \), lo que significaría que \( b_1 \) es una unidad, contradiciendo la suposición de que \( b_1 \) no es una unidad."
 
 #### **1.3 Continuación del proceso**
 Aplicamos el mismo argumento a \( a_1 \) y \( b_1 \) si no son irreducibles:
@@ -73,10 +73,7 @@ a = p_1 p_2 \dots p_r = q_1 q_2 \dots q_s
 donde todos los \( p_i \) y \( q_j \) son irreducibles.
 
 #### **2.1 Aplicación del Corolario 18.13**
-Por el **Corolario 18.13**, en un DIP, **todo irreducible es primo**. Esto significa que cada \( p_1 \) **debe dividir a uno de los \( q_j \)**.
-
-Como \( p_1 \) es primo y divide al producto \( q_1 q_2 \dots q_s \), debe dividir a uno de los \( q_j \), digamos \( q_1 \). Es decir, existe una unidad \( u_1 \) tal que:
-
+Por el **Corolario 18.13**, en un DIP, **todo irreducible es primo**. Esto implica que cada \( p_i \) debe dividir a uno de los \( q_j \). Como \( p_1 \) divide al producto \( q_1 q_2 \dots q_s \), por la definición de número primo, debe dividir a algún \( q_j \), digamos \( q_1 \). En consecuencia, existe una unidad \( u_1 \) tal que:
 \[
 q_1 = u_1 p_1
 \]
@@ -112,3 +109,5 @@ Dado que hemos demostrado que **cada elemento puede factorizarse en irreducibles
 ✦ **Q.E.D.** ✦
 
 ---
+
+
