@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+
+\title{Expresión de Polinomios en el Campo de Fracciones}
+\author{}
+\date{}
+\maketitle
+
+\begin{itemize}
+    \item Sea $D$ un dominio entero y $F$ su campo de fracciones. Entonces, para cualquier polinomio $f(X) \in F[X]$, existe un polinomio $f_0(X) \in D[X]$ y un elemento $a \in D$ tal que:
+    \[
+    f(X) = \frac{f_0(X)}{a}.
+    \]
+
+    \item Dado que $D$ es un dominio entero, su campo de fracciones $F$ consiste en todas las fracciones de la forma $\frac{a}{b}$, donde $a, b \in D$ y $b \neq 0$. Consideremos el anillo de polinomios $F[X]$, cuyos elementos son expresiones de la forma:
+    \[
+    f(X) = \sum_{i=0}^{n} c_i X^i, \quad \text{con } c_i \in F.
+    \]
+    Queremos demostrar que cualquier polinomio en $F[X]$ puede escribirse como $f(X) = \frac{f_0(X)}{a}$, donde $f_0(X) \in D[X]$ y $a \in D$.
+
+    \item Construcción de $f_0(X)$: Dado un polinomio $f(X) \in F[X]$, podemos escribir cada coeficiente $c_i$ en términos de elementos de $D$:
+    \[
+    c_i = \frac{a_i}{b_i}, \quad \text{con } a_i, b_i \in D, \quad b_i \neq 0.
+    \]
+    Sea $a$ el \textbf{mínimo común múltiplo} de los denominadores $b_0, b_1, \dots, b_n$, es decir,
+    \[
+    a = \operatorname{mcm}(b_0, b_1, \dots, b_n) \in D.
+    \]
+    Por la propiedad del mínimo común múltiplo, sabemos que $a$ es un múltiplo de cada $b_i$, lo que significa que existe $k_i \in D$ tal que:
+    \[
+    a = k_i b_i.
+    \]
+    Multiplicamos ambos lados por $a_i$, obteniendo:
+    \[
+    a a_i = k_i b_i a_i.
+    \]
+    Ahora, dividiendo por $b_i$ (que es distinto de cero en $D$):
+    \[
+    \frac{a a_i}{b_i} = k_i a_i.
+    \]
+    Dado que $k_i, a_i \in D$ y $D$ es un anillo, el producto $k_i a_i$ también pertenece a $D$. Definiendo $d_i = k_i a_i$, obtenemos:
+    \[
+    d_i = \frac{a a_i}{b_i} \in D.
+    \]
+    Definimos entonces el polinomio $f_0(X)$ en $D[X]$ como:
+    \[
+    f_0(X) = \sum_{i=0}^{n} d_i X^i.
+    \]
+    Por construcción, tenemos:
+    \[
+    f(X) = \sum_{i=0}^{n} c_i X^i = \sum_{i=0}^{n} \frac{a_i}{b_i} X^i = \sum_{i=0}^{n} \frac{d_i}{a} X^i = \frac{1}{a} \sum_{i=0}^{n} d_i X^i = \frac{f_0(X)}{a}.
+    \]
+
+    \item Conclusión: Hemos demostrado que cualquier polinomio en $F[X]$ puede escribirse como $f(X) = \frac{f_0(X)}{a}$ con $f_0(X) \in D[X]$ y $a \in D$. Esto implica que $D[X]$ es un subanillo de $F[X]$, ya que cada polinomio en $F[X]$ se obtiene como un polinomio en $D[X]$ dividido por un elemento de $D$.
+    \[
+    \square
+    \]
+\end{itemize}
+
+\end{document}
+
