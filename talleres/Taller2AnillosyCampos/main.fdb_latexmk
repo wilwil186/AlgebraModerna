@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1738113456 "/home/wilson/repos/AlgebraModerna/talleres/Taller2AnillosyCampos/main.tex" "main.pdf" "main" 1738113457 0
+["pdflatex"] 1738182111 "/home/wilson/repos/AlgebraModerna/talleres/Taller2AnillosyCampos/main.tex" "main.pdf" "main" 1738182112 0
   "/etc/texmf/web2c/texmf.cnf" 1735827181 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/wilson/repos/AlgebraModerna/talleres/Taller2AnillosyCampos/main.tex" 1738113456 6778 6ba35fffa4acce00905c8bc73a79ab19 ""
+  "/home/wilson/repos/AlgebraModerna/talleres/Taller2AnillosyCampos/main.tex" 1738181554 4118 91ca60f8273d0414a42e3baead10a884 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -89,12 +89,15 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1681034085 39561 34c98e380bf7c7201ee6a7909aff625a ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1735827216 4623455 fa0568a71dd9a288d6c226ee477506c6 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1736949079 7879686 a0cdfa85c0c280cf808bffcc2967a782 ""
-  "main.aux" 1738113456 555 d73753d3041ecdc6b80688ba7ddf6144 "pdflatex"
-  "main.out" 1738113456 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1738113456 6778 6ba35fffa4acce00905c8bc73a79ab19 ""
+  "main.aux" 1738182112 555 540749b6ad8058d101a9af1f659298d1 "pdflatex"
+  "main.out" 1738182112 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1738181554 4118 91ca60f8273d0414a42e3baead10a884 ""
   "wilson/1.tex" 1738131078 3843 551461a86005950d3909ea72b0025eb5 ""
   "wilson/11.tex" 1738131078 4988 cdd5f34559faa453b3a4381f8a7e9b07 ""
-  "wilson/14.tex" 1738113259 4420 1ab173adf0fb93eeb2a938b0b27fddd2 ""
+  "wilson/14.tex" 1738178269 3876 dae16dfed28d44654451ec7c0879aa60 ""
+  "wilson/1c.tex" 1738179929 2544 9fff5d923ebbadd728398d76bcc84cd4 ""
+  "wilson/2c.tex" 1738180196 1722 acdaa0236d9acb227dad4c81d9487de4 ""
+  "wilson/3c.tex" 1738182110 2953 6d8f0089a0296230ae1afada189a8513 ""
   "wilson/5.tex" 1738131078 1843 69acaaa09c0065464556e3b8253ae857 ""
   "wilson/7.tex" 1738131078 2002 f65b1a5dad91fc2706c9d0407e24a544 ""
   (generated)

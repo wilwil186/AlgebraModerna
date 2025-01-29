@@ -64,25 +64,18 @@ En resumen, las unidades son exactamente aquellos elementos con norma igual a 1.
 \noindent
 \textbf{(c) Factorización de elementos no nulos ni unidades en irreducibles}
 
-Ahora, tomemos $\alpha \in \mathbb{Z}[\sqrt{-n}]$ que sea distinto de cero y no unidad. Deseamos ver que $\alpha$ puede descomponerse en irreducibles. 
-
-La idea fundamental se apoya en el hecho de que la norma $N(\alpha)$ es un número entero positivo. Si $\alpha$ no fuera irreducible, se expresaría como $\beta\gamma$ con $\beta,\gamma$ no unidades. En ese caso, tanto $N(\beta)$ como $N(\gamma)$ son estrictamente mayores que 1 pero menores que $N(\alpha)$. Esto reduce la norma y permite un proceso inductivo: se aplica la misma factorización a $\beta$ y $\gamma$, cuyos productos normales van descendiendo. Pero no podemos seguir disminuyendo indefinidamente una sucesión de números enteros positivos; por lo tanto, tarde o temprano este proceso de factorización debe terminar en factores que no se pueden seguir descomponiendo (más allá de unidades), es decir, en irreducibles. 
-
-Con ello se concluye que cualquier elemento no nulo que no sea unidad admite al menos una factorización en irreducibles.
-
----
-
-\noindent
-\textbf{Resumen}
+Para demostrar la factorización en irreducibles en $\mathbb{Z}[\sqrt{-n}]$, usamos el \textbf{principio de buena ordenación} en la norma.
 
 \begin{itemize}
-    \item[(a)] Se define la norma $N(a+b\sqrt{-n}) = a^2 + n\,b^2$ y se verifica que es multiplicativa.
-    \item[(b)] Un elemento $\alpha$ en $\mathbb{Z}[\sqrt{-n}]$ es unidad si y sólo si su norma es 1.
-    \item[(c)] Cualquier elemento no nulo que no sea unidad puede descomponerse en irreducibles, gracias al principio de buena ordenación aplicado a las normas.
+    \item Si $\alpha$ no es una unidad, entonces $N(\alpha) > 1$. Si $\alpha$ no es irreducible, se puede escribir como $\alpha = \beta \gamma$ con $\beta, \gamma$ no unidades.
+    \item Como la norma es multiplicativa, tenemos que $N(\alpha) = N(\beta) N(\gamma)$, y por ser enteros positivos, se tiene $N(\beta), N(\gamma) < N(\alpha)$.
+    \item Procedemos por inducción en la norma. Si todo elemento de norma menor que $N(\alpha)$ tiene factorización en irreducibles, entonces también lo tiene $\alpha$, pues sus factores $\beta$ y $\gamma$ se pueden descomponer en irreducibles.
+    \item Aplicando el principio de buena ordenación, concluimos que todo elemento distinto de cero y no unidad en $\mathbb{Z}[\sqrt{-n}]$ se puede descomponer en irreducibles.
 \end{itemize}
 
 \[
-\boxed{\text{Con esto, queda demostrada la factorización en irreducibles para los apartados (a), (b) y (c).}}
+\boxed{\text{Con esto, queda demostrada la factorización en irreducibles.}}
 \]
+
 
 

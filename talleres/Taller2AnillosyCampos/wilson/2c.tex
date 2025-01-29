@@ -1,0 +1,35 @@
+Muestre que el polinomio \( p(x) = x^2 + x + 3 \) es irreducible en \( \mathbb{Q}[x] \).
+
+\textbf{Solución:}
+
+Para demostrar la irreducibilidad del polinomio \( p(x) = x^2 + x + 3 \) en \( \mathbb{Q}[x] \), utilizamos el siguiente resultado:
+
+\textbf{Teorema 23.10 (Fraleigh, 7ma edición)}\\
+\textit{
+Sea \( f(x) \in F[x] \) y supongamos que \( f(x) \) tiene grado 2 o 3. Entonces \( f(x) \) es reducible sobre \( F \) si y solo si tiene una raíz en \( F \).
+}
+
+\textbf{Demostración:}\\
+Supongamos que \( f(x) \) es reducible sobre \( F \). Entonces puede escribirse como el producto de dos polinomios no constantes en \( F[x] \), es decir,
+\[
+f(x) = g(x)\,h(x),
+\]
+donde \(\deg g(x) < \deg f(x)\) y \(\deg h(x) < \deg f(x)\). 
+Dado que \( f(x) \) tiene grado 2 o 3, uno de los factores (por ejemplo, \( g(x) \)) debe ser de grado 1. Por lo tanto, 
+\[
+g(x) = x - a, \quad \text{para algún } a \in F.
+\]
+Como \( g(a) = 0 \), concluimos que \( a \) es una raíz de \( f(x) \). 
+De esta manera, si \( f(x) \) es reducible sobre \( F[x] \), necesariamente tiene una raíz en \( F \).
+
+Recíprocamente, si existe \( a \in F \) tal que \( f(a) = 0 \), entonces \( x - a \) es un factor de \( f(x) \), lo que muestra que \( f(x) \) es reducible.
+
+\textbf{Aplicación al ejercicio:}\\
+Para comprobar que \( p(x) = x^2 + x + 3 \) es irreducible en \(\mathbb{Q}[x]\), basta con verificar que no tiene raíces racionales. 
+Resolviendo la ecuación cuadrática asociada,
+\[
+x = \frac{-1 \pm \sqrt{1 - 12}}{2} 
+   = \frac{-1 \pm \sqrt{-11}}{2},
+\]
+se observa que \(\sqrt{-11}\notin \mathbb{Q}\). 
+Por lo tanto, \( p(x) \) no posee raíces en \(\mathbb{Q}\) y, de acuerdo con el Teorema 23.10, es irreducible sobre \(\mathbb{Q}\).
