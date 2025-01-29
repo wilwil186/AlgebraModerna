@@ -1,0 +1,88 @@
+Sea $n \in \mathbb{Z}^+$ libre de cuadrado, esto es, no es divisible por el cuadrado de ningún primo. Sea $\mathbb{Z}[\sqrt{-n}] = \{\,a + b\sqrt{-n}\mid a,b \in \mathbb{Z}\}$.
+    
+    \begin{enumerate}
+        \item[a)] Defínase la norma $N$ dada por $N(a + b\sqrt{-n}) = a^2 + nb^2$, identificándola como una norma multiplicativa en $\mathbb{Z}[\sqrt{-n}]$.
+        
+        \item[b)] Muéstrese que $N(\alpha) = 1$ para $\alpha \in \mathbb{Z}[\sqrt{-n}]$ si y solo si $\alpha$ es una unidad en $\mathbb{Z}[\sqrt{-n}]$.
+        
+        \item[c)] Muéstrese que todo $\alpha \in \mathbb{Z}[\sqrt{-n}]$ que sea distinto de cero y no sea unidad tiene factorización en irreducibles en $\mathbb{Z}[\sqrt{-n}]$. \textbf{[Sugerencia: úsese (b).]}
+    \end{enumerate}
+
+\textbf{Solución} \\
+
+\noindent
+\textbf{(a) Definición de la norma y multiplicatividad}
+
+Sea $\alpha = a + b\sqrt{-n}$ en $\mathbb{Z}[\sqrt{-n}]$. Definimos la norma
+\[
+N(\alpha) \;=\; a^2 + n\,b^2.
+\]
+Queremos ver que, dadas $\alpha = a + b\sqrt{-n}$ y $\beta = c + d\sqrt{-n}$, se cumple
+\[
+N(\alpha \beta) \;=\; N(\alpha)\, N(\beta).
+\]
+En efecto, si multiplicamos
+\[
+\alpha \beta = (a + b\sqrt{-n})(c + d\sqrt{-n}) = (ac - bdn) + (ad + bc)\sqrt{-n},
+\]
+entonces, al calcular
+\[
+N(\alpha \beta) = (ac - bdn)^2 \;+\; n\,(ad + bc)^2,
+\]
+y tras expandir con cuidado, podemos comprobar que
+\[
+(a^2 + nb^2)\,(c^2 + nd^2) 
+\;=\; (ac - bdn)^2 \;+\; n\,(ad + bc)^2.
+\]
+Así, $N(\alpha\beta) = N(\alpha)\,N(\beta)$, confirmando que $N$ es un morfismo multiplicativo.
+
+---
+
+\noindent
+\textbf{(b) Caracterización de las unidades mediante la norma}
+
+Queremos mostrar que $N(\alpha) = 1$ si y sólo si $\alpha$ es una unidad en $\mathbb{Z}[\sqrt{-n}]$. 
+
+\begin{itemize}
+    \item[\(\Longrightarrow\)] Si $N(\alpha) = 1$, consideramos la inversa de $\alpha = a + b\sqrt{-n}$ en el campo de fracciones $\mathbb{Q}(\sqrt{-n})$. Se sabe que
+    \[
+    \alpha^{-1} \;=\; \frac{a - b\sqrt{-n}}{a^2 + n\,b^2}.
+    \]
+    Dado que $a^2 + n\,b^2 = 1$, la inversa se simplifica a $a - b\sqrt{-n}$, que está de nuevo en $\mathbb{Z}[\sqrt{-n}]$. Esto prueba directamente que $\alpha$ es invertible (es decir, es una unidad) en el anillo.
+    
+    \item[\(\Longleftarrow\)] Si $\alpha$ es unidad, existe alguna $\beta \in \mathbb{Z}[\sqrt{-n}]$ tal que $\alpha\beta = 1$. Aplicando la norma y usando su multiplicatividad,
+    \[
+    N(\alpha \beta) = N(\alpha)\,N(\beta) = N(1) = 1.
+    \]
+    Dado que $N(\alpha)$ y $N(\beta)$ son números enteros positivos (excepto si fueran cero, en cuyo caso no tendríamos una unidad), la única forma de que su producto sea 1 es que ambos valgan 1. Así, $N(\alpha)=1$.
+\end{itemize}
+
+En resumen, las unidades son exactamente aquellos elementos con norma igual a 1.
+
+---
+
+\noindent
+\textbf{(c) Factorización de elementos no nulos ni unidades en irreducibles}
+
+Ahora, tomemos $\alpha \in \mathbb{Z}[\sqrt{-n}]$ que sea distinto de cero y no unidad. Deseamos ver que $\alpha$ puede descomponerse en irreducibles. 
+
+La idea fundamental se apoya en el hecho de que la norma $N(\alpha)$ es un número entero positivo. Si $\alpha$ no fuera irreducible, se expresaría como $\beta\gamma$ con $\beta,\gamma$ no unidades. En ese caso, tanto $N(\beta)$ como $N(\gamma)$ son estrictamente mayores que 1 pero menores que $N(\alpha)$. Esto reduce la norma y permite un proceso inductivo: se aplica la misma factorización a $\beta$ y $\gamma$, cuyos productos normales van descendiendo. Pero no podemos seguir disminuyendo indefinidamente una sucesión de números enteros positivos; por lo tanto, tarde o temprano este proceso de factorización debe terminar en factores que no se pueden seguir descomponiendo (más allá de unidades), es decir, en irreducibles. 
+
+Con ello se concluye que cualquier elemento no nulo que no sea unidad admite al menos una factorización en irreducibles.
+
+---
+
+\noindent
+\textbf{Resumen}
+
+\begin{itemize}
+    \item[(a)] Se define la norma $N(a+b\sqrt{-n}) = a^2 + n\,b^2$ y se verifica que es multiplicativa.
+    \item[(b)] Un elemento $\alpha$ en $\mathbb{Z}[\sqrt{-n}]$ es unidad si y sólo si su norma es 1.
+    \item[(c)] Cualquier elemento no nulo que no sea unidad puede descomponerse en irreducibles, gracias al principio de buena ordenación aplicado a las normas.
+\end{itemize}
+
+\[
+\boxed{\text{Con esto, queda demostrada la factorización en irreducibles para los apartados (a), (b) y (c).}}
+\]
+
+

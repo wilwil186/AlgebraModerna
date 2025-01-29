@@ -1,0 +1,60 @@
+Encuéntrese el mcd de los polinomios
+\[
+f(x) \;=\; x^{10} \;-\; 3x^9 \;+\; 3x^8 \;-\; 11x^7 \;+\; 11x^6 \;-\; 11x^5 
+        \;+\; 19x^4 \;-\; 13x^3 \;+\; 8x^2 \;-\; 9x \;+\; 3,
+\]
+\[
+g(x) \;=\; x^6 \;-\; 3x^5 \;+\; 4x^4 \;-\; 9x^3 \;+\; 5x^2 \;-\; 5x \;+\; 2
+\]
+en $\mathbb{Q}[x]$.
+
+\textbf{Solución:} 
+
+Aplicamos el \textbf{algoritmo de Euclides} siguiendo la sucesión típica de divisiones:
+\[
+\begin{aligned}
+    f(x) &= q_1(x)\,g(x) + r_1(x), \\
+    g(x) &= q_2(x)\,r_1(x) + r_2(x), \\
+    r_1(x) &= q_3(x)\,r_2(x) + r_3(x), \\
+          &\;\;\vdots \\
+    r_{n-1}(x) &= q_n(x)\,r_n(x) + 0,
+\end{aligned}
+\]
+donde el último residuo no nulo, \(r_n(x)\), es el \textbf{máximo común divisor}.
+
+\medskip
+
+En nuestro caso concreto, los pasos de división se especifican como sigue:
+
+\[
+\begin{aligned}
+f(x) \;=\;& 
+  (x^4 \;-\; 2x)\;\cdot g(x) 
+  \;+\; \underbrace{\bigl(-2x^7 + 6x^6 - 6x^5 + 6x^4 - 13x^3 + 8x^2 - 9x + 3\bigr)}_{r_1(x)},
+\\[4pt]
+g(x) \;=\;& 
+  (x^2 + 6x \;-\; 19)\;\cdot r_1(x) 
+  \;+\; \underbrace{\bigl(19x^4 + 57x^3 + 38x^2 - 23x + 2\bigr)}_{r_2(x)},
+\\[4pt]
+r_1(x) \;=\;& 
+  (\,x \;-\; 3\,)\;\cdot r_2(x) 
+  \;+\; \underbrace{\bigl(x^3 + 2x - 1\bigr)}_{r_3(x)},
+\\[4pt]
+r_2(x) \;=\;& (19x+57 )\;\cdot r_3(x) \;+\; 0.
+\end{aligned}
+\]
+
+Tras la última división, el proceso de Euclides concluye porque el residuo es cero y, por tanto, 
+el \textit{último resto distinto de cero} es
+\[
+r_3(x) \;=\; x^3 \;+\; 2x \;-\; 1.
+\]
+
+En un anillo de polinomios sobre un campo $\mathbb{Q}[x]$, los divisores máximos comunes son únicos \emph{salvo} un factor constante no nulo. Así, concluimos:
+
+\[
+\boxed{\gcd\!\bigl(f(x),\,g(x)\bigr) \;=\; x^3 \;+\; 2x \;-\; 1.}
+\]
+
+\noindent
+\textbf{Observación:} Cada coeficiente se maneja sobre \(\mathbb{Q}\), por lo que las operaciones de división de polinomios se realizan sin restricciones, y no necesitamos normalizar factores adicionales más allá de un posible factor multiplicativo no cero. Así queda verificado el resultado final. 

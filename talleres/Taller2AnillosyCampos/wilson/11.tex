@@ -1,0 +1,124 @@
+\noindent
+\textbf{Solución:}
+
+\medskip
+
+\noindent
+\textbf{1. El anillo y la norma}
+
+\noindent
+Recordemos que
+\[
+\mathbb{Z}[\sqrt{-5}] \;=\; \{\, a + b\sqrt{-5} \;\mid\; a,b\in\mathbb{Z}\},
+\]
+y que para cada \(z = a + b\sqrt{-5}\) definimos la \emph{norma} como
+\[
+N(z) \;=\; z \, \overline{z} 
+\;=\; (a + b\sqrt{-5})(a - b\sqrt{-5})
+\;=\; a^2 + 5\,b^2.
+\]
+Esta norma resulta crucial porque \emph{es multiplicativa}, es decir, 
+\[
+N(z_1 z_2) \;=\; N(z_1)\,N(z_2),
+\]
+lo que nos ayudará a analizar la irreducibilidad de varios elementos.
+
+\bigskip
+
+\noindent
+\textbf{2. Dos factorizaciones distintas de \(6\)}
+
+\noindent
+En \(\mathbb{Z}[\sqrt{-5}]\), el número entero \(6\) tiene las siguientes dos factorizaciones:
+\[
+6 \;=\; 2 \cdot 3
+\quad\text{y}\quad
+6 \;=\; (1 + \sqrt{-5})(1 - \sqrt{-5}).
+\]
+Vamos a ver que los factores que aparecen en una y otra expresión son \emph{irreducibles} y no se pueden relacionar por unidades (asociados). De este modo, comprobamos que la factorización de \(6\) en este anillo \emph{no} es única (hasta unidades).
+
+\bigskip
+
+\noindent
+\textbf{3. Verificación de irreducibilidad de los factores}
+
+\medskip
+
+\noindent
+\textbf{3.1. Irreducibilidad de \(2\)}
+
+\begin{itemize}
+    \item \emph{Norma de 2:} \(N(2) = 4\).
+    \item Si \(2\) fuera reducible, existiría una factorización 
+    \[
+    2 \;=\; (a + b\sqrt{-5})(c + d\sqrt{-5}),
+    \]
+    con ninguno de los dos factores igual a \(\pm 1\) (los únicos posibles valores de las unidades en este anillo).  
+    \item Tomando la norma, 
+    \[
+    4 = N(2) = N(a + b\sqrt{-5})\, N(c + d\sqrt{-5}).
+    \]
+    Eso implica que el par de normas debe multiplicarse para dar \(4\). En particular, podría pensarse en factorizar \(4\) como \(1 \times 4\), \(2 \times 2\) o \(4 \times 1\).
+    \item \emph{Norma 2 imposible:} No hay solución en enteros para \(a^2 + 5 b^2 = 2\), pues revisando casos sencillos \((a,b)\) no aparece ninguna pareja que cumpla esa ecuación.  
+    \item De modo que, si uno de los factores tuviera norma \(4\), el otro forzosamente tendría norma \(1\) (es decir, sería unidad). Esto demuestra que no podemos factorizarlos ambos como no unidades. Por lo tanto, \(2\) es irreducible.
+\end{itemize}
+
+\medskip
+
+\noindent
+\textbf{3.2. Irreducibilidad de \(3\)}
+
+\begin{itemize}
+    \item \emph{Norma de 3:} \(N(3) = 9\).
+    \item Si \(3\) fuera reducible, al tomar la norma veríamos que la única forma de factorizar \(9\) con factores mayores que 1 es \(3 \times 3\). Sin embargo, no existe elemento en \(\mathbb{Z}[\sqrt{-5}]\) con norma \(3\), porque la ecuación \(a^2 + 5b^2 = 3\) tampoco tiene soluciones en enteros.
+    \item Luego, si uno de los factores de la factorización hipotética de \(3\) no fuera unidad, su norma tendría que ser \(3\), lo cual no es posible. Así, no hay factorización no trivial. De ahí se concluye que \(\,3\) es irreducible.
+\end{itemize}
+
+\medskip
+
+\noindent
+\textbf{3.3. Irreducibilidad de \(1 + \sqrt{-5}\) y \(1 - \sqrt{-5}\)}
+
+\begin{itemize}
+    \item \emph{Normas:} 
+    \[
+    N(1 + \sqrt{-5}) = 1^2 + 5\cdot1^2 = 6,
+    \quad
+    N(1 - \sqrt{-5}) = 1^2 + 5\cdot1^2 = 6.
+    \]
+    \item Para factorizar, por ejemplo, \(1 + \sqrt{-5}\) en un producto no trivial \((x)(y)\), las normas de \(x\) e \(y\) tendrían que multiplicarse para dar \(6\). Por tanto, una de las normas debería ser \(2\) o \(3\) (porque \(6 = 2 \times 3\)), o bien \(1\) y \(6\). Pero ya hemos visto que no puede haber un factor con norma \(2\) ni con norma \(3\), y si uno de los factores tuviera norma \(1\), sería una unidad.  
+    \item Por lo tanto, \(1 + \sqrt{-5}\) no admite factorizaciones no triviales (análogamente para \(1 - \sqrt{-5}\)). Esto prueba su irreducibilidad.
+\end{itemize}
+
+\bigskip
+
+\noindent
+\textbf{4. Diferencia esencial entre las dos factorizaciones de \(6\)}
+
+\noindent
+Hemos verificado que \(2\), \(3\), \(1 + \sqrt{-5}\) y \(1 - \sqrt{-5}\) son irreducibles. Ahora, para ver que las dos factorizaciones
+\[
+6 = 2 \cdot 3
+\quad\text{y}\quad
+6 = (1 + \sqrt{-5})(1 - \sqrt{-5})
+\]
+no son “la misma” (ni difieren sólo por una unidad), basta notar que no podemos convertir, por ejemplo, \(2\) en \(1 + \sqrt{-5}\) multiplicándola por \(\pm1\). Si existiera \(u \in \{\pm 1\}\) tal que 
+\[
+2 = u\, (1 + \sqrt{-5}),
+\]
+se obtendría una contradicción al comparar partes reales e imaginarias.  
+Por tanto, estas factorizaciones no se relacionan por asociados, lo que confirma que \(\mathbb{Z}[\sqrt{-5}]\) no tiene factorización única.
+
+\bigskip
+
+\noindent
+\textbf{5. Conclusión}
+
+\noindent
+Así, el elemento \(6\) en \(\mathbb{Z}[\sqrt{-5}]\) admite dos descomposiciones distintas en irreducibles:  
+\[
+6 \;=\; 2 \cdot 3 
+\quad\quad\text{y}\quad\quad 
+6 \;=\; (1 + \sqrt{-5})(1 - \sqrt{-5}),
+\]
+sin que los factores aparecidos en una factorización sean meramente asociados a los de la otra. Con esto finalizamos la demostración de que \(\mathbb{Z}[\sqrt{-5}]\) \emph{no} es un dominio de factorización única.
