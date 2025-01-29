@@ -1,0 +1,153 @@
+Sea $f(x) = x^6 + 3x^5 + 4x^2 - 3x + 2$ y $g(x) = x^2 + 2x - 3$ en $\mathbb{Z}_7[x]$. 
+Encuéntrese $q(x)$ y $r(x)$ en $\mathbb{Z}_7[x]$ tal que 
+\[
+f(x) = g(x)\,q(x) + r(x), 
+\quad\text{con}\quad \deg(r(x)) < 2.
+\]
+
+\textbf{Solución:} Aplicamos la división de polinomios en $\mathbb{Z}_7[x]$, cuidando la aritmética módulo 7.
+
+\begin{itemize}
+
+    \item \textit{División inicial:} Dividimos el término de mayor grado de $f(x)$ entre el de mayor grado de $g(x)$:
+    \[
+    \frac{x^6}{x^2} \;=\; x^4.
+    \]
+    Multiplicamos $g(x)$ por $x^4$ y restamos:
+    \[
+    \begin{aligned}
+    f(x) - x^4\,g(x)
+    &=\; \bigl(x^6 + 3x^5 + 4x^2 - 3x + 2\bigr)
+    \;-\; \bigl(x^6 + 2x^5 - 3x^4\bigr) \\
+    &=\; (x^6 - x^6)
+    + (3x^5 - 2x^5)
+    + \bigl(0 - (-3x^4)\bigr)
+    + 4x^2
+    - 3x
+    + 2 \\
+    &=\; x^5 \;+\; 3x^4 \;+\; 4x^2 \;-\; 3x \;+\; 2.
+    \end{aligned}
+    \]
+    Denotamos este nuevo polinomio como 
+    \[
+    r_1(x) = x^5 + 3x^4 + 4x^2 - 3x + 2.
+    \]
+
+    \item \textit{Segundo paso:} Dividimos el término de mayor grado de $r_1(x)$ entre $x^2$:
+    \[
+    \frac{x^5}{x^2} \;=\; x^3.
+    \]
+    Multiplicamos $g(x)$ por $x^3$ y restamos:
+    \[
+    \begin{aligned}
+    r_1(x) - x^3\,g(x)
+    &=\; \bigl(x^5 + 3x^4 + 4x^2 - 3x + 2\bigr)
+    \;-\;\bigl(x^5 + 2x^4 - 3x^3\bigr) \\
+    &=\; (x^5 - x^5)
+    + (3x^4 - 2x^4)
+    + \bigl(0 - (-3x^3)\bigr)
+    + 4x^2
+    - 3x
+    + 2 \\
+    &=\; x^4 + 3x^3 + 4x^2 - 3x + 2.
+    \end{aligned}
+    \]
+    Sea 
+    \[
+    r_2(x) = x^4 + 3x^3 + 4x^2 - 3x + 2.
+    \]
+
+    \item \textit{Tercer paso:} Dividimos $x^4$ entre $x^2$:
+    \[
+    \frac{x^4}{x^2} \;=\; x^2.
+    \]
+    Multiplicamos $g(x)$ por $x^2$ y restamos de $r_2(x)$:
+    \[
+    \begin{aligned}
+    r_2(x) - x^2\,g(x)
+    &=\; \bigl(x^4 + 3x^3 + 4x^2 - 3x + 2\bigr)
+    \;-\;\bigl(x^4 + 2x^3 - 3x^2\bigr) \\
+    &=\; (x^4 - x^4)
+    + (3x^3 - 2x^3)
+    + (4x^2 - (-3x^2))
+    - 3x
+    + 2 \\
+    &=\; x^3 + \bigl(4x^2 + 3x^2\bigr) - 3x + 2 \\
+    &=\; x^3 + 7x^2 - 3x + 2 \\
+    &\equiv\; x^3 - 3x + 2 
+    \quad (\mathrm{mod}\;7),
+    \end{aligned}
+    \]
+    porque $7x^2 \equiv 0$ en $\mathbb{Z}_7$. Denotamos 
+    \[
+    r_3(x) = x^3 - 3x + 2.
+    \]
+
+    \item \textit{Cuarto paso:} Dividimos $x^3$ entre $x^2$:
+    \[
+    \frac{x^3}{x^2} \;=\; x.
+    \]
+    Multiplicamos $g(x)$ por $x$ y restamos:
+    \[
+    \begin{aligned}
+    r_3(x) - x\,g(x)
+    &=\; \bigl(x^3 - 3x + 2\bigr)
+    -\;\bigl(x^3 + 2x^2 - 3x\bigr) \\
+    &=\; (x^3 - x^3) + \bigl(0\,x^2 - 2x^2\bigr) + \bigl((-3x)-(-3x)\bigr) + 2 \\
+    &=\; -2x^2 + 2
+    \;\equiv\; 5x^2 + 2
+    \quad (\mathrm{mod}\,7).
+    \end{aligned}
+    \]
+    Por tanto, ahora el resto es $5x^2 + 2$, que aún tiene grado 2, así que seguimos.
+
+    \item \textit{Quinto paso:} Dividimos $5x^2$ entre $x^2$:
+    \[
+    \frac{5x^2}{x^2} \;=\; 5.
+    \]
+    Multiplicamos $g(x)$ por 5 (en $\mathbb{Z}_7$, $-2 \equiv 5$), y restamos:
+    \[
+    \begin{aligned}
+    5 \cdot g(x)
+    &=\; 5x^2 + 10x - 15
+    \;\equiv\; 5x^2 + 3x + 6
+    \quad (\mathrm{mod}\,7), \\
+    \bigl(5x^2 + 2\bigr) \;-\; \bigl(5x^2 + 3x + 6\bigr)
+    &=\; (5x^2-5x^2) + (0 - 3x) + (2 - 6) \\
+    &=\; -3x - 4
+    \;\equiv\; 4x + 3
+    \quad (\mathrm{mod}\,7).
+    \end{aligned}
+    \]
+    El resto final es, por tanto,
+    \[
+    r(x) = 4x + 3,
+    \]
+    y satisface $\deg\bigl(r(x)\bigr) < 2$.
+
+\end{itemize}
+
+Para hallar el cociente total $q(x)$, sumamos todos los términos usados en cada división:
+
+\[
+q(x) 
+\;=\; x^4 \;+\; x^3 \;+\; x^2 \;+\; x \;+\; 5
+\;\equiv\; x^4 + x^3 + x^2 + x - 2,
+\quad (\text{en } \mathbb{Z}_7).
+\]
+
+\medskip
+\noindent
+\textbf{Conclusión:} Hemos obtenido
+\[
+\boxed{
+q(x) = x^4 + x^3 + x^2 + x - 2
+\quad\text{y}\quad
+r(x) = 4x + 3.
+}
+\]
+Verificando la igualdad $f(x) = g(x) \, q(x) + r(x)$ en $\mathbb{Z}_7[x]$, se confirma la corrección de esta división.
+
+
+
+

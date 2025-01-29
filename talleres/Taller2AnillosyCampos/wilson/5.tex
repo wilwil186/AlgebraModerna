@@ -1,0 +1,30 @@
+Si $D$ es un dominio de ideales principales (DIP), entonces $D[x]$ es un DIP.
+
+\textbf{Demostraci\'on.} 
+
+Sea $D$ un dominio de ideales principales, es decir, un dominio integral en el cual todo ideal es principal. Debemos demostrar que todo ideal de $D[x]$ es principal.
+
+
+\begin{enumerate}
+\item[\textbf{Paso 1:}] \textit{Reducci\'on a ideales no nulos.}  
+Sea $I$ un ideal de $D[x]$. Si $I = \{0\}$, entonces $I$ es principal pues $I = \langle 0 \rangle$. Asumamos que $I \neq \{0\}$.
+
+\item[\textbf{Paso 2:}] \textit{Elecci\'on de un polinomio de grado m\'inimo.}  
+Dado que $I$ es no nulo, existe un polinomio $f(x)\neq 0$ en $I$ con grado m\'inimo, es decir, para todo $g(x) \in I$ con $g(x)\neq 0$, se cumple $\deg(f)\leq \deg(g)$.
+
+\item[\textbf{Paso 3:}] \textit{Generaci\'on del ideal con $f(x)$.}  
+Sea $\langle f(x)\rangle = \{\,f(x)h(x)\mid h(x)\in D[x]\}$. Queremos probar que $I=\langle f(x)\rangle$, es decir, que $f(x)$ genera $I$.
+
+\item[\textbf{Paso 4:}] \textit{Divisi\'on en $D[x]$.}  
+Para cualquier $g(x)\in I$, usamos la divisi\'on eucl\'idea en $D[x]$:  
+\[
+g(x) \;=\; q(x)\,f(x)\;+\; r(x),
+\quad\text{donde } \deg(r)<\deg(f).
+\]
+Como $I$ es un ideal, tanto $g(x)$ como $q(x)f(x)$ pertenecen a $I$, de donde $r(x) = g(x) - q(x)f(x)$ tambi\'en est\'a en $I$.  
+La elecci\'on de $f(x)$ con grado m\'inimo implica que no puede existir un $r(x)\neq 0$ con $\deg(r)<\deg(f)$ dentro de $I$, pues esto contradir\'ia la minimalidad de $f(x)$. Por tanto, $r(x)=0$, con lo que $g(x)=q(x)f(x)\in \langle f(x)\rangle$. As\'i, $I\subseteq \langle f(x)\rangle$.
+
+\item[\textbf{Paso 5:}] \textit{Conclusi\'on.}  
+Por construcci\'on, $\langle f(x)\rangle\subseteq I$. De 1) y 4) se concluye $I=\langle f(x)\rangle$. Con ello, todo ideal de $D[x]$ es principal, y por ende $D[x]$ es un dominio de ideales principales.
+
+\end{enumerate}
