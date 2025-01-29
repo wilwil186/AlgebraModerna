@@ -1,59 +1,22 @@
 Determine los elementos de \( \mathbb{Q}[x] / \langle p(x) \rangle \).
 
-Sea \(p(x)\) un polinomio de grado \(n\) en \(\mathbb{Q}[x]\). El anillo cociente 
+Cada elemento de \( \mathbb{Q}[x] / \langle p(x) \rangle \) es una clase de equivalencia de la forma:
 \[
-\mathbb{Q}[x]/\langle p(x)\rangle
+a_0 + a_1 x + \cdots + a_{d-1} x^{d-1} + \langle p(x) \rangle
 \]
-está formado por las clases de equivalencia de polinomios bajo la relación
+donde \( p(x) \) es un polinomio de grado \( d \), y \( a_0, a_1, \dots, a_{d-1} \in \mathbb{Q} \).
+
+En otras palabras, cada elemento puede representarse de manera única como un polinomio de grado menor que \( d \), es decir,
 \[
-f(x) \sim g(x) \quad \Longleftrightarrow \quad f(x) - g(x) \in \langle p(x)\rangle,
+\mathbb{Q}[x] / \langle p(x) \rangle \cong \mathbb{Q}[t],
 \]
-es decir, \(f(x) - g(x)\) es un múltiplo de \(p(x)\). A continuación, se describen sus elementos y estructura:
+donde \( t \) es la clase residuo de \( x \) en el cociente, es decir, \( t = x + \langle p(x) \rangle \), y satisface la relación \( p(t) = 0 \).
 
-\begin{enumerate}
-    \item \textbf{Elementos.} 
-    Cada elemento (clase de equivalencia) puede representarse por un polinomio de grado menor que \(n\). 
-    Esto se debe a que, dado cualquier polinomio \(f(x)\), al dividirlo por \(p(x)\) se obtiene
-    \[
-    f(x) = q(x)\,p(x) + r(x),
-    \]
-    donde \(\deg(r(x)) < n\). 
-    El residuo \(r(x)\) es el representante único (de grado menor que \(\deg p(x)\)) de la clase de \(f(x)\). 
-    Por tanto, cada clase de equivalencia puede escribirse como
-    \[
-    a_0 + a_1x + \dots + a_{n-1}x^{n-1}, \quad a_i\in \mathbb{Q}.
-    \]
+\textbf{Ejemplo:}
 
-    \item \textbf{Operaciones.} 
-    La suma y multiplicación se definen como en \(\mathbb{Q}[x]\), pero considerando que, 
-    tras operar, se reduce el resultado módulo \(p(x)\). 
-    En otras palabras, si \([f(x)]\) denota la clase de equivalencia de \(f(x)\), entonces:
-    \[
-    [f(x)] + [g(x)] \;=\; [\,f(x) + g(x)\,],
-    \]
-    \[
-    [f(x)] \cdot [g(x)] \;=\; [\,f(x)\,g(x)\,].
-    \]
-    Al final, el resultado se reemplaza por su residuo de grado menor que \(n\).
-
-    \item \textbf{Interpretación como espacio vectorial.} 
-    Visto como espacio vectorial sobre \(\mathbb{Q}\), el anillo \(\mathbb{Q}[x]/\langle p(x)\rangle\) 
-    tiene dimensión \(n\). Sus elementos pueden entenderse como “polinomios truncados” hasta grado \(n-1\), 
-    con las operaciones inducidas por la reducción módulo \(p(x)\).
-
-    \item \textbf{Caso especial: \(p(x)\) irreducible.} 
-    Si \(p(x)\) es irreducible sobre \(\mathbb{Q}\), el ideal \(\langle p(x)\rangle\) es maximal, 
-    por lo que el cociente \(\mathbb{Q}[x]/\langle p(x)\rangle\) es un \textbf{cuerpo}. 
-    Esto se interpreta como una extensión de \(\mathbb{Q}\) de grado \(n\), frecuentemente denotada por 
-    \(\mathbb{Q}(\alpha)\), donde \(\alpha\) es una raíz de \(p(x)\). 
-    En este caso, todo elemento no nulo tiene inverso, y el cociente resulta muy útil en la construcción 
-    de extensiones algebraicas de \(\mathbb{Q}\).
-\end{enumerate}
-
-\noindent
-\textbf{Resumen.} Los elementos de \(\mathbb{Q}[x]/\langle p(x)\rangle\) son las clases de equivalencia 
-de polinomios módulo \(p(x)\). Cada clase se representa de forma única por un polinomio de grado 
-menor que \(n = \deg(p(x))\). La suma y el producto se definen módulo \(p(x)\). 
-Si \(p(x)\) es irreducible, este anillo cociente se convierte en un cuerpo 
-que cumple un rol central en la teoría de campos y en el estudio de extensiones algebraicas.
+Si \( p(x) = x^2 - 2 \), entonces los elementos de \( \mathbb{Q}[x] / \langle x^2 - 2 \rangle \) son:
+\[
+a + b t, \quad a, b \in \mathbb{Q},
+\]
+donde \( t^2 = 2 \). En este caso, el anillo cociente es isomorfo a \( \mathbb{Q}(\sqrt{2}) \).
 
