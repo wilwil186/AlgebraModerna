@@ -1,0 +1,49 @@
+Para factorizar el polinomio \( x^4 + 4 \) en \( \mathbb{Z}_5[x] \), seguimos los siguientes pasos:
+
+\smallskip
+
+\textbf{Paso 1: Expresión del polinomio en \( \mathbb{Z}_5[x] \)}
+
+Dado que estamos en el cuerpo finito \( \mathbb{Z}_5 \), el número 4 es equivalente a \(-1\), por lo que podemos reescribir:
+
+\[
+x^4 + 4 \equiv x^4 - 1 \pmod{5}
+\]
+
+Observamos que esto se asemeja a una diferencia de cuadrados:
+
+\[
+x^4 - 1 = (x^2 - 1)(x^2 + 1).
+\]
+
+\smallskip
+
+\textbf{Paso 2: Factorización de \( x^2 - 1 \) y \( x^2 + 1 \) en \( \mathbb{Z}_5[x] \)}
+
+En \( \mathbb{Z}_5 \), las raíces de \( x^2 - 1 = 0 \) son los valores \( x = \pm 1 \). Esto nos da:
+
+\[
+x^2 - 1 = (x - 1)(x + 1).
+\]
+
+Ahora, examinemos \( x^2 + 1 \). En \( \mathbb{Z}_5 \), buscamos raíces de \( x^2 + 1 = 0 \), lo que equivale a encontrar soluciones para \( x^2 \equiv -1 \equiv 4 \pmod{5} \). Como \( 2^2 \equiv 4 \pmod{5} \), tenemos que \( x^2 + 1 \) tiene raíces en \( x = \pm 2 \), lo que nos da la factorización:
+
+\[
+x^2 + 1 = (x - 2)(x + 2).
+\]
+
+\smallskip
+
+\textbf{Paso 3: Factorización completa en factores lineales}
+
+Uniendo ambas factorizaciones, obtenemos:
+
+\[
+x^4 + 4 = (x - 1)(x + 1)(x - 2)(x + 2) \quad \text{en } \mathbb{Z}_5[x].
+\]
+
+Por lo tanto, la factorización completa en factores lineales en \( \mathbb{Z}_5[x] \) es:
+
+\[
+(x - 1)(x + 1)(x - 2)(x + 2).
+\]

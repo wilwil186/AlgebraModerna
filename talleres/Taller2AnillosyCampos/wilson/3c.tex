@@ -1,22 +1,28 @@
 Determine los elementos de \( \mathbb{Q}[x] / \langle p(x) \rangle \).
 
-Cada elemento de \( \mathbb{Q}[x] / \langle p(x) \rangle \) es una clase de equivalencia de la forma:
-\[
-a_0 + a_1 x + \cdots + a_{d-1} x^{d-1} + \langle p(x) \rangle
-\]
-donde \( p(x) \) es un polinomio de grado \( d \), y \( a_0, a_1, \dots, a_{d-1} \in \mathbb{Q} \).
-
-En otras palabras, cada elemento puede representarse de manera única como un polinomio de grado menor que \( d \), es decir,
-\[
-\mathbb{Q}[x] / \langle p(x) \rangle \cong \mathbb{Q}[t],
-\]
-donde \( t \) es la clase residuo de \( x \) en el cociente, es decir, \( t = x + \langle p(x) \rangle \), y satisface la relación \( p(t) = 0 \).
-
-\textbf{Ejemplo:}
-
-Si \( p(x) = x^2 - 2 \), entonces los elementos de \( \mathbb{Q}[x] / \langle x^2 - 2 \rangle \) son:
-\[
-a + b t, \quad a, b \in \mathbb{Q},
-\]
-donde \( t^2 = 2 \). En este caso, el anillo cociente es isomorfo a \( \mathbb{Q}(\sqrt{2}) \).
-
+\begin{itemize}
+    \item Los elementos de $\mathbb{Q}[x] / \langle p(x) \rangle$ están dados por las clases de equivalencia de los polinomios en $\mathbb{Q}[x]$ módulo $p(x)$. Formalmente, podemos describir estos elementos como sigue:
+    
+    El conjunto de clases de equivalencia es
+    \[
+    \mathbb{Q}[x] / \langle p(x) \rangle = \{ f(x) + \langle p(x) \rangle \mid f(x) \in \mathbb{Q}[x] \}.
+    \]
+    Es decir, dos polinomios $f(x)$ y $g(x)$ representan el mismo elemento si su diferencia es un múltiplo de $p(x)$, es decir, si $f(x) \equiv g(x) \mod p(x)$.
+    
+    Como $p(x)$ tiene grado $n$, cada clase de equivalencia tiene un representante único de la forma:
+    \[
+     a_0 + a_1 x + \dots + a_{n-1} x^{n-1},
+    \]
+    donde $a_i \in \mathbb{Q}$. Esto se debe a que cualquier polinomio $f(x)$ en $\mathbb{Q}[x]$ puede reducirse módulo $p(x)$ mediante la división euclidiana, dejando un residuo de grado menor que $n$.
+    
+    \begin{itemize}
+        \item Si $p(x)$ es irreducible sobre $\mathbb{Q}$, entonces $\mathbb{Q}[x] / \langle p(x) \rangle$ es un \textbf{cuerpo} y se puede interpretar como una extensión de $\mathbb{Q}$ de grado $n$.
+        \item Si $p(x)$ es reducible, el cociente es un \textbf{anillo con divisores de cero}, no necesariamente un cuerpo.
+    \end{itemize}
+    
+    Para $p(x) = x^2 + 1$, los elementos del cociente son de la forma:
+    \[
+     a + bx, \quad a, b \in \mathbb{Q}.
+    \]
+    En este caso, $\mathbb{Q}[x] / \langle x^2 + 1 \rangle$ es isomorfo a $\mathbb{Q}(i)$, donde $i^2 = -1$, representando la extensión $\mathbb{Q}$ con la unidad imaginaria.
+\end{itemize}
