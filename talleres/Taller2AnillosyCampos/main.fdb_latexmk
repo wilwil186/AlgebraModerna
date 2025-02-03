@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1738592044 "/home/wilson/repos/AlgebraModerna/talleres/Taller2AnillosyCampos/main.tex" "main.pdf" "main" 1738592045 0
+["pdflatex"] 1738604695 "/home/wilson/repos/AlgebraModerna/talleres/Taller2AnillosyCampos/main.tex" "main.pdf" "main" 1738604697 0
   "/etc/texmf/web2c/texmf.cnf" 1735827181 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/wilson/repos/AlgebraModerna/talleres/Taller2AnillosyCampos/main.tex" 1738592042 2551 e8057febb07002e836cdb30353862202 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -98,10 +98,10 @@
   "Juli/10.tex" 1738591914 1342 24be467fe05565f857ce2acce3259c75 ""
   "Juli/13.tex" 1738591975 4194 1bb5de36755f6ea142e3fffdfc6f2aab ""
   "Juli/2.tex" 1738355104 1351 25d67664fdbc50ac041c8ed72ac9c40c ""
-  "Juli/3.tex" 1738356153 1413 3d702f8d87385fd6d95b24c79919e99c ""
+  "Juli/3.tex" 1738604694 1569 570e32b7dcb2f4dde65690b854a4ca88 ""
   "Juli/8.tex" 1738591967 1323 096a30320035a179fb6907953e756658 ""
-  "main.aux" 1738592044 555 907f391b031292eb27cccb03ee6a388a "pdflatex"
-  "main.out" 1738592044 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1738604697 555 907f391b031292eb27cccb03ee6a388a "pdflatex"
+  "main.out" 1738604696 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1738592042 2551 e8057febb07002e836cdb30353862202 ""
   "nico/4.tex" 1738357336 3311 27f4852a05462259cec7248458e180aa ""
   "wilson/1.tex" 1738131078 3843 551461a86005950d3909ea72b0025eb5 ""
