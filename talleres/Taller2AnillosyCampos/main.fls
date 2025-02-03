@@ -586,6 +586,15 @@ INPUT wilson/7.tex
 INPUT ./wilson/7.tex
 INPUT ./wilson/7.tex
 INPUT wilson/7.tex
+INPUT ./Juli/8.tex
+INPUT Juli/8.tex
+INPUT ./Juli/8.tex
+INPUT Juli/8.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
+INPUT ./Juli/10.tex
+INPUT Juli/10.tex
+INPUT ./Juli/10.tex
+INPUT Juli/10.tex
 INPUT ./wilson/11.tex
 INPUT ./wilson/11.tex
 INPUT ./wilson/11.tex
@@ -593,6 +602,10 @@ INPUT wilson/11.tex
 INPUT ./wilson/11.tex
 INPUT ./wilson/11.tex
 INPUT wilson/11.tex
+INPUT ./Juli/13.tex
+INPUT Juli/13.tex
+INPUT ./Juli/13.tex
+INPUT Juli/13.tex
 INPUT ./wilson/14.tex
 INPUT ./wilson/14.tex
 INPUT ./wilson/14.tex
@@ -621,6 +634,7 @@ INPUT ./main.out
 INPUT ./main.out
 INPUT /usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb

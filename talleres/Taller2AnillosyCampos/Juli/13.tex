@@ -1,0 +1,43 @@
+Sea $\langle \alpha \rangle$ un ideal principal distinto de cero en $\mathbb{Z}[i]$.
+    \begin{itemize}
+    
+        \item [\textit{a)}] Muéstrese que $\mathbb{Z}[i]/\langle \alpha \rangle$ es un anillo finito
+        
+        \item [\textit{b)}] Muéstrese que si $\pi$ es un irreducible de $\mathbb{Z}[i]$ entonces $\mathbb{Z}[i]/\langle \pi \rangle$ es un campo.
+
+        \item [\textit{c)}] Con respecto a \textit{b)}, encuéntrese el orden y característica de cada uno de los campos siguientes:
+        
+        \begin{itemize}
+            \item [1)] $\mathbb{Z}[i]/\langle 3 \rangle$
+            
+            \item [2)] $\mathbb{Z}[i]/\langle 1 + i \rangle$
+            
+            \item [3)] $\mathbb{Z}[i]/\langle 1 + 2i \rangle$
+        \end{itemize}
+    \end{itemize}
+
+    \textbf{Solución:} \textit{a)} Sea $\beta + \langle \alpha \rangle$ una clase lateral de $\mathbb{Z}[i]/\langle \alpha \rangle$, luego, como $\beta \in \mathbb{Z}[i]$ entonces aplicando el algoritmo de la división existen $\sigma, \delta$ tales que $\beta = \alpha\sigma + \delta$ dónde $\delta = 0$ ó $N(\delta) < N(\alpha)$.
+
+    Así, tenemos que $\beta + \langle \alpha \rangle = (\alpha\sigma + \delta) + \langle \alpha \rangle$, y como $\sigma\alpha \in \langle \alpha \rangle$ entonces ocurre que $\beta +\langle \alpha \rangle = \delta + \langle \alpha \rangle$, por lo tanto, la clase lateral de $\langle \alpha \rangle$ contiene un representante cuya norma es menor que $N(\alpha)$. \smallskip
+    
+    Como $N(\alpha)$ es un número entero positivo, quiere decir que existe un número finito de elementos en $\mathbb{Z}[i]$ cuya norma es menor que $N(\alpha)$. Por lo tanto el conjunto $\mathbb{Z}[i]/\langle \alpha \rangle$ es un anillo finito.
+
+    \textit{b)} Sea $\pi$ un irreducible en $\mathbb{Z}[i]$, se afirma que $\langle \pi \rangle$ es máximal. En efecto, supongasé que existe un ideal $\langle \mu \rangle$ de $\mathbb{Z}[i]$ tal que $\langle \pi \rangle \subseteq \langle \mu \rangle$. Luego, esto es que $\pi$ es de la forma $\pi = \mu\delta$, luego como $\pi$ es irreducible, ocurre que $\mu$ es una unidad, así $\langle \mu \rangle = \mathbb{Z}[i]$, por otro lado si $\delta$ es unidad, entonces $\mu = \pi \delta^{-1}$, es decir $\mu \in \langle \pi \rangle$, así $\langle \pi \rangle = \langle \mu \rangle$, es decir $\langle \pi \rangle$ es máximal, y por lo tanto $\mathbb{Z}[i] / \langle \pi \rangle$ es campo.
+
+    \textit{c)} \textbf{[1.]} Note que $\langle 3 \rangle$ contiene a $3$ y $3i$, luego para cualquier número de la forma $a +bi \in \mathbb{Z}[i]$ las clases laterales distintas son los elementos $a,b$ del conjunto $\{0, 1, 2\}$. Luego, las cantidad de posibles combinaciones para una pareja de numeros $(a,b)$ con elementos de ese conjunto es $3 \times 3= 9$, por lo tanto, el orden de $\mathbb{Z}[i]/\langle 3 \rangle$ es $9$.
+
+    Por otro lado, como cualquier clase lateral multiplicada con 3 es equivalente a 0, entonces la 
+
+    \textbf{[2.]} Por el item \textit{a)} sabemos que cada clase lateral contiene un representante tal que su norma es menor que $N(1 + i) = 2$, por lo tanto los únicos elementos de $\mathbb{Z}[i]$ que cumplen esto son $\pm1$ y $\pm i$. Por otro lado, note que $i = -1 + (1+i)$ y $-i = 1 -(1 + i)$, por ende $i \equiv-1$ y $-i \equiv 1$, así, el orden de $\mathbb{Z}[i]/\langle 1 + i \rangle$ es 2, y por ende, su caracteristica es 2.
+
+    \textbf{c)} Usando nuevamente el item \textit{a)}, tenemos que los elementos cuya norma es menor que $N(1 +2i) = 5$ son $\pm 1$, $\pm2$, $\pm i$, $1\pm i$, $-1+i$, $-1-i$, $\pm2i$. Por otro lado note que
+    $$i = 2+ (1+2i)i$$
+    $$-i = -2+(1+2i)(-i)$$
+    $$2i = -1 +(1+2i)$$
+    $$-2i = 1 - (1+2i)$$
+    $$1 + i = -2 + (1+2i)(1-i)$$
+    $$1-i = -1 +(1+2i)(-i)$$
+    $$-1+i = 1 + (1+2i)i$$
+    $$-1-i = 2 + (1+2i)(-1+i)$$
+
+    Por lo tanto tenemos que $i \equiv2$, $-i \equiv-2$, $2i \equiv -1$, $-2i \equiv 1$, $1+i \equiv -2$, $-1-i \equiv 2$, $1-i \equiv -1$ y $-1+i\equiv 1$, así, cada clase lateral tiene como representante a los elementos $\pm 1$, $\pm 2$ y $0$, por lo tando el orden de $\mathbb{Z}[i]/\langle 1 + 2i \rangle$ es 5. Por lo tanto su caracteristica es 5 
