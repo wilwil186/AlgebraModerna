@@ -1,0 +1,54 @@
+Encontrar el inverso multiplicativo de \( a + b t \) en \( \mathbb{Q}[x] / \langle p(x) \rangle \), donde \( p(x) \) es irreducible en \( \mathbb{Q}[x] \) y \( t \) es la clase de \( x \) en el cociente.
+
+\textbf{Solución:} Como \( \mathbb{Q}[x] / \langle p(x) \rangle \) es un cuerpo, todo elemento no nulo tiene inverso. Se busca \( q(t) \) tal que:
+\[
+(a + b t) q(t) \equiv 1 \pmod{p(t)}.
+\]
+Dado que \( p(x) \) es irreducible y de grado \( n \), se cumple \( \gcd(a + b x, p(x)) = 1 \). Aplicando el algoritmo de Euclides extendido, existen \( q(x), k(x) \in \mathbb{Q}[x] \) tales que:
+\[
+(a + b x) q(x) + k(x) p(x) = 1.
+\]
+Reduciendo módulo \( p(x) \):
+\[
+(a + b x) q(x) \equiv 1 \pmod{p(x)}.
+\]
+Por lo tanto, \( q(t) \) es el inverso de \( a + b t \).
+
+\textbf{Cálculo explícito para \( \deg(p) = 2 \):}  
+Sea \( p(x) = x^2 + c x + d \), buscamos \( q(t) = u + v t \) tal que:
+\[
+(a + b t)(u + v t) \equiv 1 \pmod{p(t)}.
+\]
+Multiplicando:
+\[
+(a + b t)(u + v t) = a u + (a v + b u) t + b v t^2.
+\]
+Sustituyendo \( t^2 = -c t - d \):
+\[
+b v t^2 = -b v c t - b v d.
+\]
+\[
+(a u - b v d) + (a v + b u - b v c) t \equiv 1.
+\]
+Sistema de ecuaciones:
+\[
+\begin{cases}
+a u - b v d = 1, \\
+a v + b u - b v c = 0.
+\end{cases}
+\]
+Resolviendo:
+\[
+v = \frac{b}{a b c - a^2 - b^2 d}, \quad u = \frac{b c - a}{a b c - a^2 - b^2 d}.
+\]
+Inverso:
+\[
+q(t) = u + v t = \frac{b c - a}{a b c - a^2 - b^2 d} + \frac{b}{a b c - a^2 - b^2 d} t.
+\]
+
+\textbf{Caso general \( \deg(p) = n \):}  
+El inverso \( q(t) = c_0 + c_1 t + \dots + c_{n-1} t^{n-1} \) se obtiene resolviendo el sistema de \( n \) ecuaciones que surge al imponer \( (a + b t) q(t) \equiv 1 \pmod{p(t)} \), expresando \( t^k \) en términos de \( 1, t, \dots, t^{n-1} \) usando \( p(t) = 0 \). Esto se resuelve mediante eliminación gaussiana o el algoritmo de Euclides extendido.
+
+\textbf{Conclusión:}  
+El inverso de \( a + b t \) en \( \mathbb{Q}[x]/\langle p(x) \rangle \) existe y es único, dado que el cociente es un cuerpo. Se obtiene aplicando el algoritmo de Euclides extendido o resolviendo un sistema de ecuaciones.
+

@@ -1,0 +1,75 @@
+Pruebe que si $F$ es un campo, todo ideal primo propio de $F[x]$ es maximal.
+\\
+\noindent
+\textbf{Paso Previo: Necesidad del Teorema 27.24}
+
+Antes de proceder con la demostración, necesitamos el siguiente resultado fundamental:
+
+\smallskip
+
+\textbf{Teorema 27.24 (Fraleigh, 7ª Edición)}  
+Si \( F \) es un campo, entonces todo ideal en \( F[x] \) es principal.
+
+\smallskip
+
+\textbf{Demostración del Teorema 27.24}  
+
+Sea \( N \) un ideal de \( F[x] \).  
+
+- Si \( N = \{0\} \), entonces \( N = \langle 0 \rangle \), que es principal.  
+- Supongamos que \( N \neq \{0\} \), y tomemos un polinomio \( g(x) \) no nulo en \( N \) con grado mínimo.  
+  - Si \( \deg(g(x)) = 0 \), entonces \( g(x) \in F \) y es una unidad. Por el \textbf{Teorema 27.5}, en este caso \( N = F[x] = \langle 1 \rangle \), lo que muestra que \( N \) es principal.  
+  - Si \( \deg(g(x)) \geq 1 \), tomemos cualquier \( f(x) \in N \).  
+  - Por el \textbf{Teorema 23.1}, aplicando la \textbf{división euclidiana}, existen \( q(x), r(x) \in F[x] \) tales que  
+    \[
+    f(x) = g(x) q(x) + r(x),
+    \]
+    donde \( r(x) = 0 \) o \( \deg(r(x)) < \deg(g(x)) \).  
+  - Como \( f(x), g(x) \in N \), se tiene que \( f(x) - g(x)q(x) = r(x) \in N \).  
+  - Como \( g(x) \) tiene grado mínimo en \( N \), se deduce que \( r(x) = 0 \).  
+  - Así, \( f(x) = g(x) q(x) \), lo que muestra que \( N = \langle g(x) \rangle \), probando que \( N \) es principal.  
+\(\blacklozenge\)
+
+\smallskip
+
+\textbf{Demostración del Teorema}
+
+\textbf{Teorema:}  
+Si \( F \) es un campo, entonces todo ideal primo propio de \( F[x] \) es maximal.
+
+\smallskip
+
+\textbf{Paso 1: Identificación de los ideales primos}
+
+Por el \textbf{Teorema 27.24}, todo ideal en \( F[x] \) es principal. Así, un ideal primo propio en \( F[x] \) es de la forma \( \langle p(x) \rangle \) para algún polinomio \( p(x) \in F[x] \).  
+
+Si \( \langle p(x) \rangle \) es primo, entonces para cualquier \( f(x), g(x) \in F[x] \), si \( f(x) g(x) \in \langle p(x) \rangle \), se cumple que al menos uno de \( f(x) \) o \( g(x) \) pertenece a \( \langle p(x) \rangle \).  
+
+Esto implica que \( p(x) \) debe ser \textbf{irreducible}, pues si fuera reducible, es decir, si  
+\[
+p(x) = f(x) g(x)
+\]
+con \( \deg f(x), \deg g(x) < \deg p(x) \), ninguno de los factores pertenecería a \( \langle p(x) \rangle \), lo que contradice la primacidad del ideal.
+
+\smallskip
+
+\textbf{Paso 2: Prueba de que es maximal}
+
+Supongamos que \( \langle p(x) \rangle \) es un ideal primo propio y que existe un ideal \( N \) tal que  
+\[
+\langle p(x) \rangle \subsetneq N \subsetneq F[x].
+\]  
+Por el \textbf{Teorema 27.24}, \( N \) es principal, es decir, \( N = \langle g(x) \rangle \) para algún \( g(x) \in F[x] \). Como \( p(x) \in N \), existe \( q(x) \in F[x] \) tal que  
+\[
+p(x) = g(x) q(x).
+\]
+Dado que \( p(x) \) es irreducible, \( g(x) \) debe ser un múltiplo de \( p(x) \) o una unidad en \( F[x] \).
+
+- Si \( g(x) \) es una unidad en \( F[x] \), entonces \( N = F[x] \), lo que contradice que \( N \) es un ideal propio.  
+- Si \( g(x) \) es un múltiplo de \( p(x) \), entonces \( N = \langle p(x) \rangle \), lo que significa que \( \langle p(x) \rangle \) es maximal.
+
+\smallskip
+
+\textbf{Conclusión}
+
+Hemos probado que todo ideal primo propio en \( F[x] \) es maximal. \(\square\)

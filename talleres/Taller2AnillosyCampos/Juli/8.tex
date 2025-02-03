@@ -1,0 +1,25 @@
+Muestresé que $\{a + xf(x) | a \in \mathbb{Z}, f(x) \in \mathbb{Z}[x]\}$ es un ideal de $\mathbb{Z}[x]$
+
+\textbf{Demostración:} Sea $I = \{a + xf(x) | a \in \mathbb{Z}, f(x) \in \mathbb{Z}[x]\}$, entonces
+\begin{itemize}
+    \item [1.] \textit{$I$ es subgrupo aditivo}
+
+    \begin{itemize}
+        \item [\textit{a)}] \textbf{\textit{Cerrado bajo la suma}}: Sean $p(x),q(x)\in\mathbb{Z}[x]$ y $a,b\in\mathbb{Z}$, así
+        $$(a +xp(x)) + (b + xq(x)) = (a+b) + x(p(x) + q(x))$$
+
+        Dónde $a+b\in \mathbb{Z}$ y $p(x) + q(x) \in \mathbb{Z}[x]$ \smallskip
+
+        \item [\textit{b)}] \textbf{\textit{Inverso y Neturo}}: Note que $0 \in I$ pues $0 = 0 + x(0)$, dónde $0 \in \mathbb{Z}$ y $0 \in \mathbb{Z}[x]$. Además, para un elemento $a + xp(x)$ existe $-a\in \mathbb{Z}$ y $-p(x) \in \mathbb{Z}[x]$ tal que
+        $$a + xp(x) + (-a) + x(-p(x)) = 0$$
+
+        Así el elemento inverso y neturo pertenecen a $I$
+    \end{itemize}
+
+    \item [2.] \textit{Cerrado bajo la multiplicación}: Sea $h(x)\in \mathbb{Z}[x]$ y $a + xp(x)\in I$, así se tiene que
+    $$h(x)(a+xp(x)) = ah(x) + xp(x)h(x)$$
+
+    Luego, el polinomio $ah(x)$ tiene termino constante en $\mathbb{Z}$, y además $p(x)h(x) \in \mathbb{Z}[x]$, por lo tango $ah(x) + xp(x)h(x) \in I$        
+\end{itemize}
+
+Así, $I$ es un ideal de $\mathbb{Z}[x]$

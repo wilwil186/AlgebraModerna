@@ -1,0 +1,8 @@
+Sea $D$ un DFU. Un elemento $c \in D$ es un \textbf{mínimo común multiplo} (mcm) \textbf{de dos elementos} $a,b \in D$ si $a | c$ y $b | c$ y si $c$ divide a todo elemento de $D$ que sea divisible entre $a$ y $b$. Muestrese que todos dos elementos distintos de cero $a,b$ de un dominio euclidiano $D$ tienen algún mcm en $D$
+
+\textbf{Demostración.} \\
+Sean $a,b \in D$ con $a$ y $b$ distintos de cero, entonces, sabemos que el conjunto de todos los multiplos de $a$ forma el ideal principal generado por $\langle a \rangle$, de la misma forma el conjunto de todos los multiplos de $b$ forma el ideal principal generado por $\langle b \rangle$. \smallskip
+    
+Como la intersección de ideales también es un ideal, tenemos que $\langle a \rangle \cap \langle b \rangle$ es también un ideal, que consta de todos los multiplos comunes de $a$ y $b$. Por otro lado, como $D$ es dominio euclidiano, en particular, es DIP, por lo tanto el ideal $\langle a \rangle \cap \langle b \rangle = \langle c \rangle$ para algún $c \in D$. Así, $c|a$ y $c|b$ pues es multiplo común de $a$ y $b$.
+
+Como $\langle c \rangle$ genera a todos los multiplos comunes de $a$ y $b$, estos son de la forma $dc$, es decir, que todo multiplo común de $a$ y $b$ es multiplo de $c$, y así por definición, $c$ es el \textbf{mínimo común multiplo} de $a$ y $b$ 
