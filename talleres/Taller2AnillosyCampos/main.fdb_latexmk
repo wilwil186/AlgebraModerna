@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1738668512 "/home/wilson/repos/AlgebraModerna/talleres/Taller2AnillosyCampos/main.tex" "main.pdf" "main" 1738668513 0
+["pdflatex"] 1738673518 "/home/wilson/repos/AlgebraModerna/talleres/Taller2AnillosyCampos/main.tex" "main.pdf" "main" 1738673521 0
   "/etc/texmf/web2c/texmf.cnf" 1735827181 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/wilson/repos/AlgebraModerna/talleres/Taller2AnillosyCampos/main.tex" 1738668509 4049 ad383de0abb37c2df9364ead84fa91b6 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -96,16 +96,16 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1735827216 4623455 fa0568a71dd9a288d6c226ee477506c6 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1736949079 7879686 a0cdfa85c0c280cf808bffcc2967a782 ""
   "Juli/10.tex" 1738591914 1342 24be467fe05565f857ce2acce3259c75 ""
-  "Juli/13.tex" 1738591975 4194 1bb5de36755f6ea142e3fffdfc6f2aab ""
+  "Juli/13.tex" 1738673518 4215 7b6647fa98adf2f48907c4e227e87fc8 ""
   "Juli/2.tex" 1738355104 1351 25d67664fdbc50ac041c8ed72ac9c40c ""
   "Juli/3.tex" 1738604694 1569 570e32b7dcb2f4dde65690b854a4ca88 ""
   "Juli/8.tex" 1738591967 1323 096a30320035a179fb6907953e756658 ""
-  "main.aux" 1738668513 555 bee56c7debb7d363a3cca45bc56a44bd "pdflatex"
-  "main.out" 1738668513 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1738673520 555 bee56c7debb7d363a3cca45bc56a44bd "pdflatex"
+  "main.out" 1738673520 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1738668509 4049 ad383de0abb37c2df9364ead84fa91b6 ""
   "nico/12.tex" 1738666962 1354 77781c449500b61d35beec7cdfcc66e0 ""
   "nico/4.tex" 1738357336 3311 27f4852a05462259cec7248458e180aa ""
-  "nico/6.tex" 1738667032 1445 576c4f9573b42fb526dfa8d8ac22cb2b ""
+  "nico/6.tex" 1738668871 1443 89044f1ea5602818ffc2226df86bce5f ""
   "nico/9.tex" 1738667032 488 a132a02ad57616dee7d6c97d7d5b033a ""
   "wilson/1.tex" 1738131078 3843 551461a86005950d3909ea72b0025eb5 ""
   "wilson/11.tex" 1738667132 5310 1aad380814245434060a6bfa013fc74a ""
@@ -114,7 +114,7 @@
   "wilson/2c.tex" 1738180196 1722 acdaa0236d9acb227dad4c81d9487de4 ""
   "wilson/3c.tex" 1738352418 1701 0ab0d12a1bdd50902da89618bc804854 ""
   "wilson/4c.tex" 1738354587 2082 1ce41f2648a36b8af6e4c781a57d331f ""
-  "wilson/5.tex" 1738131078 1843 69acaaa09c0065464556e3b8253ae857 ""
+  "wilson/5.tex" 1738673518 1811 6b2cfc335d86b13fa1fe34a10bf96aa1 ""
   "wilson/7.tex" 1738131078 2002 f65b1a5dad91fc2706c9d0407e24a544 ""
   (generated)
   "main.aux"
