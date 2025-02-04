@@ -1,0 +1,24 @@
+Indique cuáles de las funciones dadas $\nu$ son evaluaciones euclidianas para los dominios enteros dados.
+    \begin{enumerate}
+        \item La función $\nu$ para $\mathbb{Z}$ dada por $\nu(n) = n^2$ para $n \in \mathbb{Z}$ distinto de cero.\\
+        \textbf{\textit{Soluci\'on:}} Por lo visto en clase $|.|$ es una evaluaci\'on euclideana para $\mathbb{Z}$ \\
+        Sean $a\neq b$, se tiene que existen $r,c\in \mathbb{Z}$ tal que :
+        $$a=bc + r ,\hspace{2cm}r=0\hspace{0.5cm}\lor\hspace{0.5cm}\nu(r)<\nu(b)$$
+        $$
+        \begin{array}{cll}
+            \text{Tomando} & |r|<|b| &\\
+             & |r|^2<|b|^2 & \text{el cuadrado de un numero entero, es un numero entero} \\
+             & r^2<b^2 & \text{esto ya que:} |n|^2=n^2 \\
+        \end{array}
+        $$
+        Ya que $a,b\notin(-1,1)$. Entonces: 
+        $$\nu(a)=a^2\leq a^2b^2=\nu(ab)$$
+        Con lo cual $\nu$ es una evaluaci\'on euclideana para $\mathbb{Z}$.
+        \item La función $\nu$ para $\mathbb{Q}$ dada por $\nu(a) = a^2$ para $a \in \mathbb{Q}$ distinto de cero.\\
+        \textbf{\textit{Soluci\'on:}}
+        Nótese que \textbf{NO} es una evaluaci\'on euclideana. \\
+        \textbf{\textit{Contra ejemplo:}}\\
+        T\'omese $a=\dfrac{1}{4}$ y $b=\dfrac{1}{5}$. As\'i: 
+        $$\nu(a)=\dfrac{1}{16}> \dfrac{1}{400}=\nu\left(\dfrac{1}{20}\right)=\nu(ab)$$
+        Con lo cual \textbf{No} es una evaluaci\'on euclideana.
+    \end{enumerate}
