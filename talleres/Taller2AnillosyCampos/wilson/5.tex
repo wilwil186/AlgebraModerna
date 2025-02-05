@@ -1,29 +1,15 @@
-Si $D$ es un dominio de ideales principales (DIP), entonces $D[x]$ es un DIP.
+ Si \( D \) es un dominio íntegro de ideales principales (DIP), entonces \( D[x] \) también lo es.
 
-\textbf{Demostraci\'on.} 
+\textbf{Contraejemplo:} Consideremos \( D = \mathbb{Z} \), el cual es un DIP, ya que sus ideales son de la forma \( \langle n \rangle \) con \( n \in \mathbb{Z} \).
 
-Sea $D$ un dominio de ideales principales, es decir, un dominio integral en el cual todo ideal es principal. Debemos demostrar que todo ideal de $D[x]$ es principal.
+Ahora, consideremos el ideal
+\[
+I = \langle 2, x \rangle = \{ 2f(x) + xg(x) \mid f(x), g(x) \in \mathbb{Z}[x] \}.
+\]
 
+Si \( I \) fuera principal, existiría un polinomio \( h(x) \in \mathbb{Z}[x] \) tal que \( \langle h(x) \rangle = \langle 2, x \rangle \). Esto implicaría que \( h(x) \) divide a \( 2 \) y a \( x \). Los únicos divisores de \( 2 \) en \( \mathbb{Z}[x] \) son \( \pm 1, \pm 2 \), por lo que:
 
-\begin{itemize}
-    \item\textit{Reducci\'on a ideales no nulos.}  
-    Sea $I$ un ideal de $D[x]$. Si $I = \{0\}$, entonces $I$ es principal pues $I = \langle 0 \rangle$. Asumamos que $I \neq \{0\}$.
+- Si \( h(x) = \pm 1 \), entonces \( \langle h(x) \rangle = \mathbb{Z}[x] \), lo cual es un absurdo, pues \( I \neq \mathbb{Z}[x] \) (ya que \( 1 \notin I \)).
+- Si \( h(x) = \pm 2 \), entonces \( h(x) \) no divide a \( x \) (recordemos que x puede ser impar), lo que contradice el hecho de que \( h(x) \) debe generar \( x \).
 
-    \item \textit{Elecci\'on de un polinomio de grado m\'inimo.}  
-    Dado que $I$ es no nulo, existe un polinomio $f(x)\neq 0$ en $I$ con grado m\'inimo, es decir, para todo $g(x) \in I$ con $g(x)\neq 0$, se cumple $\deg(f)\leq \deg(g)$.
-
-    \item \textit{Generaci\'on del ideal con $f(x)$.}  
-    Sea $\langle f(x)\rangle = \{\,f(x)h(x)\mid h(x)\in D[x]\}$. Queremos probar que $I=\langle f(x)\rangle$, es decir, que $f(x)$ genera $I$.
-
-    \item \textit{Divisi\'on en $D[x]$.}  
-    Para cualquier $g(x)\in I$, usamos la divisi\'on eucl\'idea en $D[x]$:  
-    \[
-    g(x) \;=\; q(x)\,f(x)\;+\; r(x),
-    \quad\text{donde } \deg(r)<\deg(f).
-    \]
-    Como $I$ es un ideal, tanto $g(x)$ como $q(x)f(x)$ pertenecen a $I$, de donde $r(x) = g(x) - q(x)f(x)$ tambi\'en est\'a en $I$.  
-    La elecci\'on de $f(x)$ con grado m\'inimo implica que no puede existir un $r(x)\neq 0$ con $\deg(r)<\deg(f)$ dentro de $I$, pues esto contradir\'ia la minimalidad de $f(x)$. Por tanto, $r(x)=0$, con lo que $g(x)=q(x)f(x)\in \langle f(x)\rangle$. As\'i, $I\subseteq \langle f(x)\rangle$.
-
-    \item \textit{Conclusi\'on.}  
-    Por construcci\'on, $\langle f(x)\rangle\subseteq I$. De 1) y 4) se concluye $I=\langle f(x)\rangle$. Con ello, todo ideal de $D[x]$ es principal, y por ende $D[x]$ es un dominio de ideales principales.
-\end{itemize}
+Por lo tanto, se concluye que \( I = \langle 2, x \rangle \) no es principal, lo que demuestra que \( \mathbb{Z}[x] \) no es un DIP, a pesar de que \( \mathbb{Z} \) sí lo es.
