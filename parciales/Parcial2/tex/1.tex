@@ -1,0 +1,28 @@
+\begin{itemize}
+    \item Para determinar si el polinomio $ x^2 + 3 $ es irreducible en $ \mathbb{Z}_7 $, podemos usar el siguiente criterio:
+    
+    \textbf{Teorema (Fraleigh, 7\textsuperscript{a} edición, Teorema 23.10):}  
+    Un polinomio cuadrático o cúbico $ f(x) $ sobre un campo finito $ \mathbb{F} $ es reducible si y solo si tiene una raíz en $ \mathbb{F} $.
+
+    \textbf{Paso 1: Evaluar el polinomio en los elementos de $ \mathbb{Z}_7 $}
+
+    Calculamos $ f(a) = a^2 + 3 $ para $ a \in \mathbb{Z}_7 $:
+
+    \[
+    \begin{aligned}
+    f(0) &= 0^2 + 3 = 3 \not\equiv 0 \pmod{7} \\
+    f(1) &= 1^2 + 3 = 4 \not\equiv 0 \pmod{7} \\
+    f(2) &= 2^2 + 3 = 4 + 3 = 7 \equiv 0 \pmod{7} \\
+    f(3) &= 3^2 + 3 = 9 + 3 = 12 \equiv 5 \pmod{7} \\
+    f(4) &= 4^2 + 3 = 16 + 3 = 19 \equiv 5 \pmod{7} \\
+    f(5) &= 5^2 + 3 = 25 + 3 = 28 \equiv 0 \pmod{7} \\
+    f(6) &= 6^2 + 3 = 36 + 3 = 39 \equiv 4 \pmod{7} \\
+    \end{aligned}
+    \]
+
+    \textbf{Paso 2: Concluir sobre la reducibilidad}
+
+    Observamos que $ f(2) \equiv 0 \pmod{7} $ y $ f(5) \equiv 0 \pmod{7} $, lo que significa que $ x^2 + 3 $ tiene raíces en $ \mathbb{Z}_7 $, específicamente $ x = 2 $ y $ x = 5 $. Según el teorema citado, esto implica que $ x^2 + 3 $ es \textbf{reducible} en $ \mathbb{Z}_7 $.
+
+    Por lo tanto, el polinomio $ x^2 + 3 $ \textbf{no es irreducible en} $ \mathbb{Z}_7 $.
+\end{itemize}

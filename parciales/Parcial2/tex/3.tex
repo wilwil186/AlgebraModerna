@@ -1,0 +1,48 @@
+\\
+\noindent
+\textbf{Teorema 46.9 (Algoritmo de Euclides)}
+
+Sea $D$ un dominio euclidiano con una norma euclidiana $\nu$, y sean $a$ y $b$ elementos no nulos de $D$. Definimos la siguiente sucesión de divisiones:
+
+\begin{align*}
+    a &= bq_1 + r_1, \quad \text{donde } r_1 = 0 \text{ o } \nu(r_1) < \nu(b), \\
+    b &= r_1 q_2 + r_2, \quad \text{donde } r_2 = 0 \text{ o } \nu(r_2) < \nu(r_1), \\
+    &\vdots \\
+    r_{i-1} &= r_i q_{i+1} + r_{i+1}, \quad \text{donde } r_{i+1} = 0 \text{ o } \nu(r_{i+1}) < \nu(r_i).
+\end{align*}
+
+Esta sucesión de residuos debe terminar en algún $r_s = 0$. Si $r_1 = 0$, entonces $b$ es un máximo común divisor (mcd) de $a$ y $b$. Si $r_1 \neq 0$ y $r_s$ es el primer residuo nulo, entonces un mcd de $a$ y $b$ es $r_{s-1}$.
+
+Además, si $d$ es un mcd de $a$ y $b$, entonces existen $\lambda, \mu \in D$ tales que:
+\[
+    d = \lambda a + \mu b.
+\]
+
+\textbf{Demostración}
+
+Dado que $\nu(r_i) < \nu(r_{i-1})$ y $\nu(r_i)$ es un entero no negativo, la sucesión debe terminar en algún $r_s = 0$ tras un número finito de pasos.
+
+Si $r_1 = 0$, entonces $a = bq_1$, lo que implica que $b$ es un mcd de $a$ y $b$. Supongamos que $r_1 \neq 0$. Si $d$ divide a $a$ y $b$, entonces:
+\[
+    d \mid (a - bq_1) \Rightarrow d \mid r_1.
+\]
+Por otro lado, si $d_1 \mid r_1$ y $d_1 \mid b$, entonces:
+\[
+    d_1 \mid (bq_1 + r_1) \Rightarrow d_1 \mid a.
+\]
+Así, los divisores comunes de $a$ y $b$ son los mismos que los de $b$ y $r_1$. Repitiendo este argumento, concluimos que los divisores comunes de $a$ y $b$ coinciden con los de $r_{s-2}$ y $r_{s-1}$. Como $r_{s-2} = q_s r_{s-1} + r_s = q_s r_{s-1}$, se deduce que un mcd de $r_{s-2}$ y $r_{s-1}$ es $r_{s-1}$, lo que demuestra la primera parte del teorema.
+
+Para expresar el mcd como combinación lineal, retrocedemos en las ecuaciones obtenidas en el algoritmo. Si $d = r_{s-1}$, usando la relación:
+\[
+    r_{s-3} = q_{s-1} r_{s-2} + r_{s-1},
+\]
+se obtiene:
+\[
+    d = r_{s-1} = r_{s-3} - q_{s-1} r_{s-2}.
+\]
+Sustituyendo recursivamente cada $r_i$ en términos de los anteriores, finalmente llegamos a una expresión de la forma:
+\[
+    d = \lambda a + \mu b.
+\]
+Si $d'$ es otro mcd de $a$ y $b$, entonces $d' = u d$ para alguna unidad $u$, lo que implica que $d'$ también puede expresarse como combinación lineal de $a$ y $b$.
+
