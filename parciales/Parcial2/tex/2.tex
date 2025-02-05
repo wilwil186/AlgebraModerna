@@ -1,0 +1,43 @@
+\textbf{Ejemplo:} Consideremos el anillo $\mathbb{Z}[x]$ de polinomios en una variable con coeficientes enteros.
+
+\begin{enumerate}
+    \item \textbf{$\mathbb{Z}[x]$ es un DFU:}
+    
+    Se sabe que $\mathbb{Z}$ es un dominio de factorizaci\'on unica (DFU) y, adem\'as, el anillo de polinomios sobre un DFU tambi\'en es DFU. Por lo tanto, $\mathbb{Z}[x]$ es un DFU.
+    
+    \item \textbf{$\mathbb{Z}[x]$ no es un Dominio Euclidiano:}
+    
+    Recordemos que todo dominio euclidiano es, en particular, un dominio principal de ideales (DIP). Demostraremos que $\mathbb{Z}[x]$ no es PID, por lo que no puede ser euclidiano.
+    
+    Consideremos el ideal
+    \[
+    I = \langle 2, x \rangle = \{2f(x) + xg(x) \mid f(x),g(x) \in \mathbb{Z}[x]\}.
+    \]
+    
+    Supongamos, buscando una contradicci\'on, que $I$ es principal. Entonces existir\'ia un polinomio $h(x) \in \mathbb{Z}[x]$ tal que
+    \[
+    I = \langle h(x) \rangle.
+    \]
+    Esto implicar\'ia que $h(x)$ divide a ambos generadores $2$ y $x$.
+    
+    Analicemos las posibilidades para $h(x)$:
+    
+    \begin{itemize}
+        \item \textbf{Si $h(x)$ es una unidad} (es decir, $h(x)=\pm 1$):  
+        Entonces $\langle h(x) \rangle = \mathbb{Z}[x]$. Sin embargo, en este caso $1 \in \mathbb{Z}[x]$ estar\'ia en $I$, lo cual es falso, ya que no es posible expresar $1$ como una combinaci\'on lineal entera de $2$ y $x$.
+    
+        \item \textbf{Si $h(x)$ es asociado a $2$} (es decir, $h(x)=\pm 2$):  
+        En este caso, aunque $h(x)$ divide a $2$, se debe verificar si tambi\'en divide a $x$. Pero no es posible que $2$ divida a $x$ en $\mathbb{Z}[x]$ ya que, de haberlo, existir\'ia un polinomio $q(x) \in \mathbb{Z}[x]$ tal que
+        \[
+        x = 2q(x).
+        \]
+        Esto implica que todos los coeficientes de $q(x)$ ser\'ian fraccionarios, lo cual es imposible en $\mathbb{Z}[x]$.
+    
+        \item \textbf{Si $\deg(h(x)) \ge 1$:}  
+        Entonces $h(x)$ es un polinomio no constante. Pero en ese caso, $h(x)$ no puede dividir al entero $2$ (que es de grado $0$), a menos que $2$ sea producto de $h(x)$ por alg\'un polinomio, lo que no es posible.
+    \end{itemize}
+    
+    Dado que ninguna de las opciones permite que $h(x)$ divida simult\'aneamente a $2$ y a $x$, concluimos que el ideal $I = \langle 2, x \rangle$ \textbf{no es principal}.
+\end{enumerate}
+
+\textbf{Conclusi\'on:} Aunque $\mathbb{Z}[x]$ es un dominio de factorizaci\'on \unica, no es un dominio euclidiano, ya que no es un dominio principal (el ideal $\langle 2, x \rangle$ no es principal). Este ejemplo ilustra que la propiedad de ser DFU no implica ser DE.
