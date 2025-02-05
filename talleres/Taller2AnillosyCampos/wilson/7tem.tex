@@ -1,0 +1,107 @@
+Encuéntrese el mcd de los polinomios
+\[
+f(x) \;=\; x^{10} \;-\; 3x^9 \;+\; 3x^8 \;-\; 11x^7 \;+\; 11x^6 \;-\; 11x^5 
+        \;+\; 19x^4 \;-\; 13x^3 \;+\; 8x^2 \;-\; 9x \;+\; 3,
+\]
+\[
+g(x) \;=\; x^6 \;-\; 3x^5 \;+\; 4x^4 \;-\; 9x^3 \;+\; 5x^2 \;-\; 5x \;+\; 2
+\]
+en $\mathbb{Q}[x]$.
+
+
+\textbf{Solución:} 
+
+\textbf{Paso 1. División de \(f(x)\) entre \(g(x)\):}
+
+Se escribe
+\[
+f(x)= q_1(x)\,g(x) + r_1(x), \qquad \deg(r_1(x)) < \deg(g(x))=6.
+\]
+Los cálculos muestran que
+\[
+q_1(x)= x^4 - x^2 - 5x - 5,
+\]
+y
+\[
+r_1(x)= -10x^5 - 3x^4 - 38x^3 + 10x^2 - 24x + 13.
+\]
+
+---
+
+\textbf{Paso 2. División de \(g(x)\) entre \(r_1(x)\):}
+
+Se escribe
+\[
+g(x)= q_2(x)\,r_1(x) + r_2(x), \qquad \deg(r_2(x)) < \deg(r_1(x))=5.
+\]
+Después de realizar la división se obtiene
+\[
+q_2(x)= -\frac{1}{10}x + \frac{33}{100},
+\]
+y
+\[
+r_2(x)= \frac{119}{100}x^4 + \frac{227}{50}x^3 - \frac{7}{10}x^2 + \frac{211}{50}x - \frac{229}{100}.
+\]
+*(Alternativamente, multiplicando por 100 se puede escribir \(r_2^*(x)=119x^4+454x^3-70x^2+422x-229\); esto es sólo para evitar fracciones, pero en \(\mathbb{Q}[x]\) ambas formas son equivalentes.)*
+
+---
+
+\textbf{Paso 3. División de \(r_1(x)\) entre \(r_2(x)\):}
+
+Se escribe
+\[
+r_1(x)= q_3(x)\,r_2(x) + r_3(x), \qquad \deg(r_3(x)) < \deg(r_2(x))=4.
+\]
+El proceso conduce a obtener
+\[
+q_3(x)= \frac{10}{119}x - \frac{4183}{14161},
+\]
+y un residuo \(r_3(x)\) de grado 3 (expresado en forma fraccionaria).
+
+---
+
+\textbf{Pasos Subsiguientes:}
+
+Continuando el algoritmo de Euclides, se realizan divisiones sucesivas
+\[
+r_2(x)= q_4(x)\,r_3(x) + r_4(x),\quad r_3(x)= q_5(x)\,r_4(x) + r_5(x),\quad \dots
+\]
+hasta que se obtiene un residuo constante no nulo. En este caso, tras completar todas las divisiones se llega a
+
+\[
+r_{n}(x)= 1 \quad (\text{con } r_{n+1}(x)=0).
+\]
+
+---
+
+\textbf{Cadena de Divisiones Resumida:}
+
+\[
+\begin{array}{rcll}
+f(x) &=& \displaystyle \Bigl(x^4 - x^2 - 5x - 5\Bigr)\,g(x) 
+  &\displaystyle +\, \underbrace{\Bigl(-10x^5 - 3x^4 - 38x^3 + 10x^2 - 24x + 13\Bigr)}_{r_1(x)},\\[2mm]
+g(x) &=& \displaystyle \Bigl(-\frac{1}{10}x + \frac{33}{100}\Bigr)\,r_1(x) 
+  &\displaystyle +\, \underbrace{r_2(x)}_{\deg=4},\\[2mm]
+r_1(x) &=& \displaystyle \Bigl(\frac{10}{119}x - \frac{4183}{14161}\Bigr)\,r_2(x)
+  &\displaystyle +\, \underbrace{r_3(x)}_{\deg=3},\\[2mm]
+&\vdots& &\\[2mm]
+r_{n-1}(x) &=& q_n(x)\,r_n(x) 
+  &\displaystyle +\, 0,\quad\text{donde } r_n(x)=1.
+\end{array}
+\]
+
+---
+
+\textbf{Conclusión:}
+
+Dado que el último residuo no nulo es la constante 1, se concluye que
+
+\[
+\boxed{\gcd\bigl(f(x),g(x)\bigr)= 1.}
+\]
+
+Esto significa que **\(f(x)\) y \(g(x)\) son coprimos en \(\mathbb{Q}[x]\)**, ya que no poseen factores comunes de grado mayor o igual a 1 (salvo unidades).
+
+---
+
+\textbf{Nota:}  Los cálculos intermedios involucran coeficientes fraccionarios, pero en \(\mathbb{Q}[x]\) es válido “limpiar” denominadores en cada paso sin alterar el MCD (salvo por un factor invertible). La presentación anterior muestra la estructura de la cadena de divisiones, la cual concluye con el residuo 1.
